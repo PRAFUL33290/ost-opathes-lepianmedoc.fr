@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Fichiers temporaires
+*.save
+*.tmp
+
+# Fichiers source graphiques (non nécessaires pour le site)
+*.mp4
+*.MP4
+*.ai
+*.AI
+*.eps
+*.EPS
+*.pdf
+*.PDF
+
+# Dossiers de livraison (assets sources, pas nécessaires pour le web)
+LOGO/LIVRAISON LOGO BRYAN/
+LOGO/LIVRAISON LOGO CELINE & BRYAN/
+LOGO/CARTE DE VISITE/
+PRESENTATIONS/
+UPDATE/
