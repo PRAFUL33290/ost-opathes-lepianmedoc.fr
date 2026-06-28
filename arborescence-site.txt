@@ -210,3 +210,37 @@ NOTES IMPORTANTES
 - Pour modifier un texte visible sur le site, il faut generalement ouvrir la page HTML concernee.
 - Pour modifier les couleurs, les tailles, les espacements ou la mise en page, il faut modifier style.css.
 - Pour remplacer une image, il faut changer le fichier dans SERVICES ou LOGO, ou modifier le chemin dans la page HTML.
+
+
+Accueil
+├── L’ostéopathie
+├── Cabinet Céline
+│   ├── Céline Andurand
+│   ├── Kim Sabourin
+│   ├── Laura Loison
+│   └── Prendre rendez-vous
+├── Cabinet Bryan
+│   ├── Bryan Salmon
+│   ├── Antoine Cazot
+│   └── Prendre rendez-vous
+├── Consultations
+├── Contacts
+└── Prendre RDV → Doctolib (lien externe)
+
+--------------------------------------------------
+Ce que j'aurais fait
+--------------------------------------------------
+
+Accueil
+├── L’ostéopathie
+├── Cabinets
+│   ├── Cabinet Céline (Lieu)
+│   │   ├── Céline Andurand
+│   │   ├── Kim Sabourin
+│   │   └── Laura Loison
+│   └── Cabinet Bryan (Lieu)
+│       ├── Bryan Salmon
+│       └── Antoine Cazot
+├── Consultations & Tarifs
+├── Contacts
+└── Prendre RDV (Bouton d'appel à l'action distinct)
