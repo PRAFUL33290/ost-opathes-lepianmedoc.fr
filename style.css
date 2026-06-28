@@ -1996,12 +1996,12 @@ ul {
   .nav-submenu a {
     align-items: center;
     padding: 9px 12px;
-    text-align: center;
+    text-align: left;
   }
 
   .submenu-copy {
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .nav-group:hover .nav-submenu,
