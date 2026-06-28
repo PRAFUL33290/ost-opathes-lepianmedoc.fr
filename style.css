@@ -191,14 +191,14 @@ ul {
   position: absolute;
   inset: 0;
   background: url('DOCUMENTS/BG HERO SECTION.jpg') center / cover no-repeat;
-  opacity: 0.24;
+  opacity: 0.46;
 }
 
 .hero::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, rgba(10, 53, 88, 0.92) 0%, rgba(26, 111, 181, 0.82) 50%, rgba(64, 180, 229, 0.76) 100%);
+  background: linear-gradient(160deg, rgba(10, 53, 88, 0.72) 0%, rgba(26, 111, 181, 0.62) 50%, rgba(64, 180, 229, 0.52) 100%);
 }
 
 .hero .container {
