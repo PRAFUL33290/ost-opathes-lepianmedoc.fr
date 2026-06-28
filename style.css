@@ -2295,6 +2295,7 @@ ul {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .cabinet-card--celine {
@@ -2309,6 +2310,7 @@ ul {
   width: 100%;
   height: 190px;
   object-fit: cover;
+  object-position: center;
   margin-top: 28px;
   border-top: 1px solid rgba(26, 111, 181, 0.08);
 }
@@ -2329,6 +2331,15 @@ ul {
   gap: 14px;
   margin: 0 28px 18px;
   font-weight: 700;
+  justify-content: center;
+}
+
+.cabinet-card--bryan .practitioner-list {
+  grid-template-columns: repeat(2, minmax(128px, 1fr));
+  width: calc(100% - 56px);
+  max-width: 310px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .practitioner-chip {
@@ -2392,6 +2403,8 @@ ul {
   color: var(--primary-dark);
   margin: 18px 28px;
   line-height: 1.65;
+  display: grid;
+  align-content: center;
 }
 
 .cabinet-card--bryan .cabinet-address {
@@ -2417,6 +2430,7 @@ ul {
   flex-wrap: wrap;
   gap: 10px;
   margin: auto 28px 0;
+  justify-content: center;
 }
 
 .btn--ghost {
@@ -2440,6 +2454,9 @@ ul {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius);
   padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .rdv-card h3 {
@@ -2447,7 +2464,9 @@ ul {
 }
 
 .rdv-card .btn {
-  margin: 6px 6px 6px 0;
+  justify-content: center;
+  margin: 6px 0;
+  width: min(100%, 340px);
 }
 
 .social-links {
@@ -2489,6 +2508,19 @@ ul {
   text-align: center;
   max-width: 760px;
   margin: 0 auto;
+}
+
+@media (min-width: 769px) {
+  .cabinet-card h3 {
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cabinet-address {
+    min-height: 154px;
+  }
 }
 
 @media (max-width: 768px) {
