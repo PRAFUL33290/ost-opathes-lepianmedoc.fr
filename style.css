@@ -1048,9 +1048,10 @@ ul {
 }
 
 .footer__brand img {
-  height: 55px;
+  height: 70px;
+  width: auto;
   margin-bottom: 16px;
-  filter: brightness(10);
+  filter: none;
 }
 
 .footer__brand p {

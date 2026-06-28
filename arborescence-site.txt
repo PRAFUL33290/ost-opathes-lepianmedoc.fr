@@ -1,0 +1,212 @@
+ARBORESCENCE DU SITE WEB
+========================
+
+Ce fichier explique l'organisation du site web des cabinets d'osteopathie du Pian-Medoc.
+
+
+HIERARCHIE VISIBLE DU SITE
+--------------------------
+
+Le site est organise autour d'une page d'accueil et de plusieurs pages accessibles depuis le menu principal.
+
+Menu principal du site :
+
+1. Accueil
+   Fichier : index.html
+   Role : page d'entree du site.
+   Elle presente les deux cabinets, les praticiens, les liens de rendez-vous et les principaux boutons de navigation.
+
+2. L'osteopathie
+   Fichier : osteopathie.html
+   Role : page d'explication.
+   Elle presente ce qu'est l'osteopathie, son approche et les benefices possibles.
+
+3. Cabinet Celine
+   Fichier : celine.html
+   Role : page du cabinet de Celine Andurand.
+   Elle presente Celine Andurand, Kim Sabourin, Laura Loison, le Pole Sante Victor Hugo et les informations de rendez-vous.
+
+4. Cabinet Bryan
+   Fichier : bryan.html
+   Role : page du cabinet de Bryan Salmon.
+   Elle presente Bryan Salmon, Antoine Cazot, la Maison Medicale Portes du Medoc et les informations de rendez-vous.
+
+5. Consultations
+   Fichier : consultations.html
+   Role : page des consultations.
+   Elle explique les motifs de consultation, les publics concernes et les informations pratiques.
+
+6. Contacts
+   Fichier : contacts.html
+   Role : page de contact.
+   Elle regroupe les coordonnees, les adresses, les telephones et les liens de rendez-vous.
+
+7. Prendre RDV
+   Lien externe : https://www.doctolib.fr
+   Role : bouton de prise de rendez-vous visible dans le menu.
+
+
+Schema de navigation :
+
+Accueil
+|-- L'osteopathie
+|-- Cabinet Celine
+|   |-- Presentation de Celine Andurand
+|   |-- Presentation de Kim Sabourin
+|   |-- Presentation de Laura Loison
+|   |-- Informations du Pole Sante Victor Hugo
+|   |-- Liens Doctolib et telephone
+|-- Cabinet Bryan
+|   |-- Presentation de Bryan Salmon
+|   |-- Presentation d'Antoine Cazot
+|   |-- Informations de la Maison Medicale Portes du Medoc
+|   |-- Lien Doctolib et telephone
+|-- Consultations
+|   |-- Motifs de consultation
+|   |-- Publics concernes
+|   |-- Informations pratiques
+|-- Contacts
+    |-- Coordonnees
+    |-- Adresses
+    |-- Telephones
+    |-- Liens de rendez-vous
+
+
+Parcours utilisateur principal :
+
+1. L'utilisateur arrive sur index.html.
+2. Il choisit un cabinet ou une rubrique depuis le menu.
+3. Il peut consulter les informations de Celine, de Bryan, des consultations ou de contact.
+4. Il peut prendre rendez-vous avec les liens Doctolib ou appeler directement les cabinets.
+
+
+RACINE DU SITE
+--------------
+
+ost-opathes-lepianmedoc.fr/
+
+C'est le dossier principal du site. Il contient toutes les pages HTML, les fichiers de style,
+les scripts et les images utilisees par le site.
+
+
+FICHIERS PRINCIPAUX
+-------------------
+
+index.html
+Page d'accueil du site.
+Elle presente les cabinets, les praticiens, les liens de rendez-vous et les boutons principaux
+vers l'osteopathie, les consultations et les pages des cabinets.
+
+osteopathie.html
+Page d'explication de l'osteopathie.
+Elle sert a presenter la discipline, son approche et ses benefices.
+
+consultations.html
+Page dediee aux consultations.
+Elle explique les motifs de consultation, les publics concernes et les informations pratiques.
+
+celine.html
+Page du cabinet de Celine Andurand.
+Elle presente Celine, ses collaboratrices, le cabinet et les informations de rendez-vous.
+
+bryan.html
+Page du cabinet de Bryan Salmon.
+Elle presente Bryan, son collaborateur, le cabinet et les informations de rendez-vous.
+
+contacts.html
+Page de contact.
+Elle regroupe les coordonnees, les liens de rendez-vous et les informations utiles pour joindre les cabinets.
+
+style.css
+Feuille de style principale du site.
+Elle gere l'apparence de toutes les pages : couleurs, typographies, espacements, boutons,
+navigation, sections, mise en page responsive, etc.
+
+script.js
+Fichier JavaScript du site.
+Il gere les interactions simples, comme le menu mobile, les effets au scroll ou les animations.
+
+projet.md
+Document de travail du projet.
+Il contient des notes, textes ou informations de reference pour construire le site.
+
+
+DOSSIER SERVICES
+----------------
+
+SERVICES/
+
+Ce dossier contient les images principales des praticiens.
+
+SERVICES/Céline.png
+Photo ou visuel utilise pour Celine Andurand et son cabinet.
+
+SERVICES/Bryan.jpg
+Photo ou visuel utilise pour Bryan Salmon et son cabinet.
+
+
+DOSSIER LOGO
+------------
+
+LOGO/
+
+Ce dossier contient le logo principal du site et ses variantes.
+
+LOGO/LOGO.webp
+Logo principal utilise par le site.
+Il est notamment reference dans la navigation, le favicon et le pied de page.
+
+LOGO/Couleurs/
+
+Ce sous-dossier contient plusieurs variantes couleur du logo.
+Ces fichiers peuvent servir de versions alternatives ou de ressources graphiques.
+
+LOGO/Couleurs/IMG_9276.PNG
+Variante couleur du logo.
+
+LOGO/Couleurs/IMG_9277.PNG
+Variante couleur du logo.
+
+LOGO/Couleurs/IMG_9278.jpeg
+Variante couleur du logo.
+
+LOGO/Couleurs/IMG_9279.PNG
+Variante couleur du logo.
+
+
+RESUME VISUEL DE L'ARBORESCENCE
+-------------------------------
+
+ost-opathes-lepianmedoc.fr/
+|-- index.html
+|-- osteopathie.html
+|-- consultations.html
+|-- celine.html
+|-- bryan.html
+|-- contacts.html
+|-- style.css
+|-- script.js
+|-- projet.md
+|-- arborescence-site.txt
+|-- SERVICES/
+|   |-- Céline.png
+|   |-- Bryan.jpg
+|-- LOGO/
+    |-- LOGO.webp
+    |-- Couleurs/
+        |-- IMG_9276.PNG
+        |-- IMG_9277.PNG
+        |-- IMG_9278.jpeg
+        |-- IMG_9279.PNG
+
+
+NOTES IMPORTANTES
+-----------------
+
+- Les pages HTML sont les pages visibles du site.
+- Le fichier style.css controle l'apparence globale.
+- Le fichier script.js controle les interactions.
+- Les dossiers SERVICES et LOGO contiennent les images utilisees par le site.
+- Pour modifier un texte visible sur le site, il faut generalement ouvrir la page HTML concernee.
+- Pour modifier les couleurs, les tailles, les espacements ou la mise en page, il faut modifier style.css.
+- Pour remplacer une image, il faut changer le fichier dans SERVICES ou LOGO, ou modifier le chemin dans la page HTML.
