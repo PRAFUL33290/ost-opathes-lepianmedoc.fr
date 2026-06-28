@@ -373,6 +373,7 @@ ul {
   border-radius: 50px;
   font-size: 0.95rem;
   font-weight: 600;
+  font-family: inherit;
   cursor: pointer;
   transition: all var(--transition);
   border: none;
