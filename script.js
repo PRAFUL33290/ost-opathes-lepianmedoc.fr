@@ -63,6 +63,45 @@ document.querySelectorAll('.faq-item__question').forEach(button => {
   });
 });
 
+// ===== PUBLIC INFO MODAL =====
+const publicModal = document.getElementById('publicModal');
+const publicModalTitle = document.getElementById('publicModalTitle');
+const publicModalBody = document.getElementById('publicModalBody');
+
+if (publicModal && publicModalTitle && publicModalBody) {
+  const closePublicModal = () => {
+    publicModal.classList.remove('is-open');
+    publicModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  document.querySelectorAll('[data-modal-target]').forEach(button => {
+    button.addEventListener('click', () => {
+      const template = document.getElementById(`modal-${button.dataset.modalTarget}`);
+
+      if (!template) {
+        return;
+      }
+
+      publicModalTitle.textContent = template.dataset.title || '';
+      publicModalBody.innerHTML = template.innerHTML;
+      publicModal.classList.add('is-open');
+      publicModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  publicModal.querySelectorAll('[data-modal-close]').forEach(button => {
+    button.addEventListener('click', closePublicModal);
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && publicModal.classList.contains('is-open')) {
+      closePublicModal();
+    }
+  });
+}
+
 // ===== SMOOTH SCROLL for anchor links =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
