@@ -2297,6 +2297,20 @@ ul {
   background: #f1f5fb;
 }
 
+.cabinet-card__booking {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 28px 22px;
+}
+
+.cabinet-card__booking .btn {
+  justify-content: center;
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 12px;
+}
+
 .cabinet-card__actions {
   display: flex;
   flex-wrap: wrap;
