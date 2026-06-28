@@ -2188,7 +2188,7 @@ ul {
 .cabinet-card {
   background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
   border-radius: var(--radius);
-  padding: 0 0 28px;
+  padding: 28px 0 0;
   box-shadow: var(--shadow);
   border: 1px solid rgba(26, 111, 181, 0.08);
   overflow: hidden;
@@ -2208,7 +2208,8 @@ ul {
   width: 100%;
   height: 190px;
   object-fit: cover;
-  border-bottom: 1px solid rgba(26, 111, 181, 0.08);
+  margin-top: 28px;
+  border-top: 1px solid rgba(26, 111, 181, 0.08);
 }
 
 .cabinet-card h3 {
@@ -2225,7 +2226,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
   gap: 14px;
-  margin: 18px 28px;
+  margin: 0 28px 18px;
   font-weight: 700;
 }
 
