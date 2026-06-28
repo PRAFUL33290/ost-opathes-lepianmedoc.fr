@@ -63,25 +63,6 @@ document.querySelectorAll('.faq-item__question').forEach(button => {
   });
 });
 
-// ===== SCROLL ANIMATIONS (Intersection Observer) =====
-const fadeEls = document.querySelectorAll('.fade-in');
-
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -40px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, observerOptions);
-
-fadeEls.forEach(el => observer.observe(el));
-
 // ===== SMOOTH SCROLL for anchor links =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
