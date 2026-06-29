@@ -12,6 +12,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Boutons d'action uniformes sur la page */
+        .practitioner-hero .hero__actions {
+            align-items: flex-start;
+            max-width: none;
+        }
+        .practitioner-hero .hero__actions .btn,
+        .profile-actions .btn,
+        .cta-banner .btn {
+            width: 320px;
+        }
+        @media (max-width: 640px) {
+            .practitioner-hero .hero__actions .btn,
+            .profile-actions .btn,
+            .cta-banner .btn {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -108,8 +127,8 @@
                     <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/bryan-salmon" target="_blank" rel="noopener" class="btn btn--primary btn--doctolib"><img src="logo-doctolib.png" alt="Doctolib" class="btn__doctolib-logo">
                         Prendre rendez-vous
                     </a>
-                    <a href="https://www.google.com/maps/place/SALMON+Bryan+-+Ost%C3%A9opathe+-+Pian+M%C3%A9doc/@44.9522234,-0.6304419,17z/data=!3m1!4b1!4m6!3m5!1s0xd54d47b7d2017b9:0x109382c5611e41e8!8m2!3d44.9522234!4d-0.627867!16s%2Fg%2F11g86j50rt?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn btn--outline">
-                        Itinéraire Google Maps
+                    <a href="https://www.google.com/maps/place/SALMON+Bryan+-+Ost%C3%A9opathe+-+Pian+M%C3%A9doc/@44.9522234,-0.6304419,17z/data=!3m1!4b1!4m6!3m5!1s0xd54d47b7d2017b9:0x109382c5611e41e8!8m2!3d44.9522234!4d-0.627867!16s%2Fg%2F11g86j50rt?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn btn--gold">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Itinéraire Google Maps</span>
                     </a>
                 </div>
             </div>
@@ -127,7 +146,7 @@
                     <p>Il accompagne les nourrissons, enfants, adolescents, adultes, femmes enceintes et sportifs.</p>
                     <div class="profile-actions">
                         <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/bryan-salmon" target="_blank" rel="noopener" class="btn btn--primary btn--doctolib"><img src="logo-doctolib.png" alt="Doctolib" class="btn__doctolib-logo">Prendre rendez-vous</a>
-                        <a href="tel:0556578625" class="btn btn--gold">05 56 57 86 25</a>
+                        <a href="tel:0556578625" class="btn btn--gold"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.7 19.7 0 0 1-8.6-3.1 19.3 19.3 0 0 1-6-6A19.7 19.7 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"></path></svg><span>05 56 57 86 25</span></a>
                     </div>
                 </div>
             </article>
@@ -145,7 +164,7 @@
                     <p>Il accompagne les nourrissons, enfants, adolescents, adultes, femmes et sportifs.</p>
                     <div class="profile-actions">
                         <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/bryan-salmon" target="_blank" rel="noopener" class="btn btn--primary btn--doctolib"><img src="logo-doctolib.png" alt="Doctolib" class="btn__doctolib-logo">Prendre rendez-vous</a>
-                        <a href="tel:0556578625" class="btn btn--gold">05 56 57 86 25</a>
+                        <a href="tel:0556578625" class="btn btn--gold"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.7 19.7 0 0 1-8.6-3.1 19.3 19.3 0 0 1-6-6A19.7 19.7 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"></path></svg><span>05 56 57 86 25</span></a>
                     </div>
                 </div>
             </article>
@@ -159,7 +178,7 @@
                     <h3>Cabinet Maison Médicale Portes du Médoc</h3>
                     <p>Maison médicale, 473 Route de Pauillac, 1<sup>er</sup> étage, 33290 Le Pian-Médoc · Parking et normes PMR · Consultations du lundi au samedi</p>
                 </div>
-                <a href="https://www.google.com/maps/place/SALMON+Bryan+-+Ost%C3%A9opathe+-+Pian+M%C3%A9doc/@44.9522234,-0.6304419,17z/data=!3m1!4b1!4m6!3m5!1s0xd54d47b7d2017b9:0x109382c5611e41e8!8m2!3d44.9522234!4d-0.627867!16s%2Fg%2F11g86j50rt?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn btn--white">Ouvrir Google Maps</a>
+                <a href="https://www.google.com/maps/place/SALMON+Bryan+-+Ost%C3%A9opathe+-+Pian+M%C3%A9doc/@44.9522234,-0.6304419,17z/data=!3m1!4b1!4m6!3m5!1s0xd54d47b7d2017b9:0x109382c5611e41e8!8m2!3d44.9522234!4d-0.627867!16s%2Fg%2F11g86j50rt?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn btn--white"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Ouvrir Google Maps</span></a>
             </div>
         </div>
     </section>

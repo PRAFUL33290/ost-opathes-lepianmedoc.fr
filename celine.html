@@ -12,6 +12,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Boutons d'action uniformes sur la page */
+        .practitioner-hero .hero__actions {
+            align-items: flex-start;
+            max-width: none;
+        }
+        .practitioner-hero .hero__actions .btn,
+        .profile-actions .btn,
+        .cta-banner .btn {
+            width: 320px;
+        }
+        @media (max-width: 640px) {
+            .practitioner-hero .hero__actions .btn,
+            .profile-actions .btn,
+            .cta-banner .btn {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -111,8 +130,8 @@
                     <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/celine-andurand/booking/places?specialityId=10&telehealth=false&source=profile" target="_blank" rel="noopener" class="btn btn--gold btn--doctolib"><img src="logo-doctolib.png" alt="Doctolib" class="btn__doctolib-logo">
                         Prendre rendez-vous — Cabinet 2
                     </a>
-                    <a href="https://www.google.com/maps/place/ANDURAND+C%C3%A9line/@44.9558747,-0.6721398,17z/data=!3m1!4b1!4m6!3m5!1s0xd54d47c82446fb3:0x837d6246914f49bc!8m2!3d44.9558747!4d-0.6695649!16s%2Fg%2F11y20p4hb?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn btn--ghost">
-                        Itinéraire Google Maps
+                    <a href="https://www.google.com/maps/place/ANDURAND+C%C3%A9line/@44.9558747,-0.6721398,17z/data=!3m1!4b1!4m6!3m5!1s0xd54d47c82446fb3:0x837d6246914f49bc!8m2!3d44.9558747!4d-0.6695649!16s%2Fg%2F11y20p4hb?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn btn--gold">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Itinéraire Google Maps</span>
                     </a>
                 </div>
             </div>
@@ -129,7 +148,7 @@
                     <p>Céline accompagne les nourrissons, enfants, adolescents, adultes, femmes enceintes et sportifs.</p>
                     <p>Elle propose des consultations dans les 2 cabinets du pôle santé, du lundi au vendredi.</p>
                     <div class="profile-actions">
-                        <button class="btn btn--ghost" type="button" data-modal-target="celine">Présentation de Céline</button>
+                        <button class="btn btn--ghost" type="button" data-modal-target="celine"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"></path><circle cx="12" cy="12" r="3"></circle></svg><span>Présentation de Céline</span></button>
                         <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/celine-andurand" target="_blank" rel="noopener" class="btn btn--primary btn--doctolib"><img src="logo-doctolib.png" alt="Doctolib" class="btn__doctolib-logo">Prendre rendez-vous — Cabinet 1</a>
                         <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/celine-andurand/booking/places?specialityId=10&telehealth=false&source=profile" target="_blank" rel="noopener" class="btn btn--gold btn--doctolib"><img src="logo-doctolib.png" alt="Doctolib" class="btn__doctolib-logo">Prendre rendez-vous — Cabinet 2</a>
                     </div>
@@ -148,7 +167,7 @@
                     <p>Kim accompagne les nourrissons, enfants, adolescents, adultes, femmes enceintes et sportifs.</p>
                     <p>Elle propose des consultations dans les 2 cabinets du pôle santé, du lundi au samedi.</p>
                     <div class="profile-actions">
-                        <button class="btn btn--ghost" type="button" data-modal-target="kim">Présentation de Kim</button>
+                        <button class="btn btn--ghost" type="button" data-modal-target="kim"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"></path><circle cx="12" cy="12" r="3"></circle></svg><span>Présentation de Kim</span></button>
                         <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/celine-andurand" target="_blank" rel="noopener" class="btn btn--primary btn--doctolib"><img src="logo-doctolib.png" alt="Doctolib" class="btn__doctolib-logo">Prendre rendez-vous — Cabinet 1</a>
                         <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/celine-andurand/booking/places?specialityId=10&telehealth=false&source=profile" target="_blank" rel="noopener" class="btn btn--gold btn--doctolib"><img src="logo-doctolib.png" alt="Doctolib" class="btn__doctolib-logo">Prendre rendez-vous — Cabinet 2</a>
                     </div>
@@ -167,7 +186,7 @@
                     <p>Laura accompagne les nourrissons, enfants, adolescents, adultes, femmes enceintes et sportifs.</p>
                     <p>Elle propose des consultations dans les 2 cabinets du pôle santé le mercredi et le samedi.</p>
                     <div class="profile-actions">
-                        <button class="btn btn--ghost" type="button" data-modal-target="laura">Présentation de Laura</button>
+                        <button class="btn btn--ghost" type="button" data-modal-target="laura"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"></path><circle cx="12" cy="12" r="3"></circle></svg><span>Présentation de Laura</span></button>
                         <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/celine-andurand" target="_blank" rel="noopener" class="btn btn--primary btn--doctolib"><img src="logo-doctolib.png" alt="Doctolib" class="btn__doctolib-logo">Prendre rendez-vous — Cabinet 1</a>
                         <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/celine-andurand/booking/places?specialityId=10&telehealth=false&source=profile" target="_blank" rel="noopener" class="btn btn--gold btn--doctolib"><img src="logo-doctolib.png" alt="Doctolib" class="btn__doctolib-logo">Prendre rendez-vous — Cabinet 2</a>
                     </div>
@@ -183,7 +202,7 @@
                     <h3>Cabinet Pôle Santé Victor Hugo</h3>
                     <p>102 Rue Victor Hugo<br>33290 Le Pian-Médoc<br>Parking et normes PMR<br>Consultations du lundi au samedi</p>
                 </div>
-                <a href="https://www.google.com/maps/place/ANDURAND+C%C3%A9line/@44.9558747,-0.6721398,17z/data=!3m1!4b1!4m6!3m5!1s0xd54d47c82446fb3:0x837d6246914f49bc!8m2!3d44.9558747!4d-0.6695649!16s%2Fg%2F11y20p4hb?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn btn--white">Ouvrir Google Maps</a>
+                <a href="https://www.google.com/maps/place/ANDURAND+C%C3%A9line/@44.9558747,-0.6721398,17z/data=!3m1!4b1!4m6!3m5!1s0xd54d47c82446fb3:0x837d6246914f49bc!8m2!3d44.9558747!4d-0.6695649!16s%2Fg%2F11y20p4hb?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn btn--white"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Ouvrir Google Maps</span></a>
             </div>
         </div>
     </section>
