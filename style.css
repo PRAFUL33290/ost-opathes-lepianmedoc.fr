@@ -587,6 +587,15 @@ ul {
   border: none;
 }
 
+.btn--gold,
+.btn--gold * {
+  color: var(--white) !important;
+}
+
+.btn--gold svg {
+  stroke: currentColor;
+}
+
 .btn--gold:visited,
 .btn--gold:hover,
 .btn--gold:focus-visible {
@@ -2887,6 +2896,10 @@ ul {
   background: #f1f5fb;
 }
 
+.address-line--nowrap {
+  white-space: nowrap;
+}
+
 .cabinet-card__booking {
   display: flex;
   flex-direction: column;
@@ -2907,6 +2920,18 @@ ul {
   gap: 10px;
   margin: auto 28px 0;
   justify-content: center;
+}
+
+.cabinet-card .btn--ghost {
+  background: var(--white);
+  border: 1px solid var(--primary);
+  color: var(--text);
+}
+
+.cabinet-card .btn--ghost:hover {
+  background: var(--primary-light);
+  color: var(--text);
+  box-shadow: var(--shadow-blue);
 }
 
 .btn--ghost {
