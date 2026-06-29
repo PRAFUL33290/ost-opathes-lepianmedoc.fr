@@ -804,17 +804,48 @@ ul {
 /* ===== PAGE BANNER ===== */
 .page-banner {
   padding: 150px 0 80px;
-  background-size: cover;
-  background-position: center;
   position: relative;
+  background: var(--gradient-hero);
   color: var(--white);
+  overflow: hidden;
 }
 
 .page-banner::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, rgba(10, 53, 88, 0.92) 0%, rgba(26, 111, 181, 0.85) 50%, rgba(64, 180, 229, 0.8) 100%);
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.page-banner::after {
+  content: '';
+  position: absolute;
+  width: 560px;
+  height: 560px;
+  background: var(--accent);
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.2;
+  top: -220px;
+  right: -120px;
+  pointer-events: none;
+}
+
+.page-banner__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.16;
+  background: var(--gold);
+  width: 380px;
+  height: 380px;
+  bottom: -120px;
+  left: -80px;
+  pointer-events: none;
 }
 
 .page-banner .container {
@@ -825,8 +856,9 @@ ul {
 
 .page-banner h1 {
   font-size: 2.8rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 16px;
+  line-height: 1.1;
 }
 
 .page-banner p {
@@ -2233,6 +2265,11 @@ ul {
 
   .page-banner h1 {
     font-size: 2rem;
+  }
+
+  .page-banner p {
+    font-size: 1rem;
+    padding: 0 16px;
   }
 
   .cta-banner h2 {
