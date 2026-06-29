@@ -1482,6 +1482,24 @@ ul {
 }
 
 /* ===== CTA BANNER ===== */
+.full-image-section {
+  width: 100%;
+  line-height: 0;
+}
+
+.full-image-section img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .full-image-section img {
+    height: 260px;
+  }
+}
+
 .cta-banner {
   background: var(--gradient-hero);
   color: var(--white);
