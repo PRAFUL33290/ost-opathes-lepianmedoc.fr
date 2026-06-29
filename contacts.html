@@ -99,12 +99,25 @@
         }
 
         .contact-rdv__label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             font-size: 0.72rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.07em;
             color: rgba(255,255,255,0.6);
             margin-bottom: 18px;
+        }
+
+        .contact-rdv__label img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            border-radius: 7px;
+            padding: 2px;
+            background: var(--white);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.16);
         }
 
         .contact-rdv__practitioner {
@@ -482,15 +495,15 @@
 
                     <!-- RDV encart -->
                     <div class="contact-rdv" id="rendez-vous">
-                        <p class="contact-rdv__label">Réserver en ligne via Doctolib</p>
+                        <p class="contact-rdv__label"><img src="logo-doctolib.png" alt="" aria-hidden="true">Réserver en ligne via Doctolib</p>
 
                         <div class="contact-rdv__practitioner">
                             <span class="contact-rdv__name">Céline Andurand</span>
                             <span class="contact-rdv__schedule">Lun – Ven</span>
                             <span class="contact-rdv__collabs">Collaboratrices : Kim Sabourin (lun-sam), Laura Loison (mer, sam)</span>
                             <div class="contact-rdv__actions">
-                                <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/celine-andurand" target="_blank" rel="noopener" class="btn btn--white">Cabinet Pôle Santé</a>
-                                <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/celine-andurand?pid=practice-131073" target="_blank" rel="noopener" class="btn btn--gold">Cabinet Maison Médicale</a>
+                                <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/celine-andurand" target="_blank" rel="noopener" class="btn btn--white btn--doctolib"><img src="logo-doctolib.png" alt="Doctolib" class="btn__doctolib-logo">Cabinet Pôle Santé</a>
+                                <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/celine-andurand?pid=practice-131073" target="_blank" rel="noopener" class="btn btn--gold btn--doctolib"><img src="logo-doctolib.png" alt="Doctolib" class="btn__doctolib-logo">Cabinet Maison Médicale</a>
                             </div>
                         </div>
 
@@ -499,7 +512,7 @@
                             <span class="contact-rdv__schedule">Lun, Mer, Ven</span>
                             <span class="contact-rdv__collabs">Collaborateur : Antoine Cazot (mar, jeu, sam)</span>
                             <div class="contact-rdv__actions">
-                                <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/bryan-salmon" target="_blank" rel="noopener" class="btn btn--white">Prendre rendez-vous</a>
+                                <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/bryan-salmon" target="_blank" rel="noopener" class="btn btn--white btn--doctolib"><img src="logo-doctolib.png" alt="Doctolib" class="btn__doctolib-logo">Prendre rendez-vous</a>
                             </div>
                         </div>
                     </div>
