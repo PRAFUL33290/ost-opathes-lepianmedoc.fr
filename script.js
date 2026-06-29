@@ -19,7 +19,7 @@ if (navToggle && navLinks) {
   const navGroups = navLinks.querySelectorAll('.nav-group');
   const isMobileNav = () => window.matchMedia('(max-width: 768px)').matches;
 
-  const closeMobileSubmenus = () => {
+  const closeAllSubmenus = () => {
     navGroups.forEach(group => {
       group.classList.remove('is-open');
       const button = group.querySelector('.nav-item');
@@ -36,7 +36,7 @@ if (navToggle && navLinks) {
     spans[0].style.transform = 'none';
     spans[1].style.opacity = '1';
     spans[2].style.transform = 'none';
-    closeMobileSubmenus();
+    closeAllSubmenus();
   };
 
   navToggle.addEventListener('click', () => {
@@ -54,15 +54,18 @@ if (navToggle && navLinks) {
   });
 
   document.addEventListener('pointerdown', event => {
-    if (!isMobileNav() || !navLinks.classList.contains('active')) {
-      return;
-    }
-
     const clickedInsideMenu = navLinks.contains(event.target);
     const clickedToggle = navToggle.contains(event.target);
 
-    if (!clickedInsideMenu && !clickedToggle) {
-      closeMobileMenu();
+    if (isMobileNav()) {
+      if (!navLinks.classList.contains('active')) return;
+      if (!clickedInsideMenu && !clickedToggle) {
+        closeMobileMenu();
+      }
+    } else {
+      if (!clickedInsideMenu) {
+        closeAllSubmenus();
+      }
     }
   });
 
@@ -75,26 +78,16 @@ if (navToggle && navLinks) {
     button.setAttribute('aria-expanded', 'false');
 
     button.addEventListener('click', event => {
-      if (!isMobileNav()) {
-        return;
-      }
-
       event.preventDefault();
       const shouldOpen = !group.classList.contains('is-open');
 
-      closeMobileSubmenus();
+      closeAllSubmenus();
 
       if (shouldOpen) {
         group.classList.add('is-open');
         button.setAttribute('aria-expanded', 'true');
       }
     });
-  });
-
-  window.addEventListener('resize', () => {
-    if (!isMobileNav()) {
-      closeMobileSubmenus();
-    }
   });
 
   // Close mobile menu on link click

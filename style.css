@@ -222,8 +222,7 @@ ul {
   height: 14px;
 }
 
-.nav-group:hover .nav-chevron,
-.nav-group:focus-within .nav-chevron {
+.nav-group.is-open .nav-chevron {
   transform: rotate(225deg) translate(-1px, -1px);
 }
 
@@ -295,8 +294,7 @@ ul {
   color: var(--primary-dark);
 }
 
-.nav-group:hover .nav-submenu,
-.nav-group:focus-within .nav-submenu {
+.nav-group.is-open .nav-submenu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -2244,14 +2242,6 @@ ul {
   .submenu-copy {
     align-items: flex-start;
     text-align: left;
-  }
-
-  .nav-group:hover .nav-submenu,
-  .nav-group:focus-within .nav-submenu {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-4px);
-    max-height: 0;
   }
 
   .nav-group.is-open .nav-submenu,
