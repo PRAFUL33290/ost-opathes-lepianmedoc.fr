@@ -700,6 +700,15 @@ ul {
   border: none;
 }
 
+.btn--white,
+.btn--white * {
+  color: var(--white) !important;
+}
+
+.btn--white svg {
+  stroke: currentColor;
+}
+
 .btn--white:visited,
 .btn--white:hover,
 .btn--white:focus-visible {
