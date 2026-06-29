@@ -77,47 +77,99 @@
         </div>
     </nav>
 
-    <!-- ===== HERO ===== -->
-    <section class="cpage-hero">
-        <div class="cpage-hero__bg" aria-hidden="true">
-            <div class="cpage-hero__orb cpage-hero__orb--1"></div>
-            <div class="cpage-hero__orb cpage-hero__orb--2"></div>
-            <div class="cpage-hero__orb cpage-hero__orb--3"></div>
-            <div class="cpage-hero__grid"></div>
-        </div>
+    <!-- ===== BANNER ===== -->
+    <section class="page-banner">
+        <div class="page-banner__orb" aria-hidden="true"></div>
         <div class="container">
-            <div class="cpage-hero__inner">
-                <div class="cpage-hero__label">
-                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 3h8M9 3v5l-4 8a4 4 0 0 0 3.6 5h6.8A4 4 0 0 0 19 16l-4-8V3M8 14h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    Le parcours de soin
+            <span class="section__tag" style="margin-bottom: 18px; display:inline-block;">Le parcours de soin</span>
+            <h1>Consultations &amp; Tarifs</h1>
+            <p>Une séance personnalisée de 45 min à 1h pour restaurer l'équilibre naturel de votre corps.</p>
+        </div>
+    </section>
+
+    <!-- ===== TARIFS & REMBOURSEMENT ===== -->
+    <section class="cpage-pricing-section section--white">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Tarifs</span>
+                <h2 class="section__title">Tarifs & Remboursement</h2>
+            </div>
+
+            <div class="cpage-pricing-layout fade-in">
+                <!-- Tarif principal -->
+                <div class="cpage-pricing-main">
+                    <div class="cpage-pricing-main__label">Consultation d'ostéopathie</div>
+                    <div class="cpage-pricing-main__price">
+                        <span class="cpage-pricing-main__amount">60</span>
+                        <span class="cpage-pricing-main__currency">€</span>
+                    </div>
+                    <p class="cpage-pricing-main__desc">Bilan complet et traitement · Séance de 45 min à 1h</p>
+                    <a href="contacts.html" class="btn btn--primary">Prendre rendez-vous</a>
                 </div>
-                <h1 class="cpage-hero__title">La consultation<br><em>en ostéopathie</em></h1>
-                <p class="cpage-hero__desc">Une séance personnalisée de 45 min à 1h pour restaurer l'équilibre naturel de votre corps.</p>
-                <div class="cpage-hero__actions">
-                    <a href="contacts.html" class="btn btn--gold">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"></path></svg>
-                        Prendre rendez-vous
-                    </a>
-                    <a href="#deroulement" class="btn btn--white-outline">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"></path></svg>
-                        Découvrir le déroulé
-                    </a>
+
+                <!-- Infos remboursement -->
+                <div class="cpage-pricing-info">
+                    <div class="cpage-pricing-info__block">
+                        <div class="cpage-pricing-info__icon">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2" stroke="currentColor" stroke-width="2"/><line x1="1" y1="10" x2="23" y2="10" stroke="currentColor" stroke-width="2"/></svg>
+                        </div>
+                        <div>
+                            <h4>Prise en charge mutuelle</h4>
+                            <p>L'ostéopathie n'est pas remboursée par la Sécurité Sociale. Cependant, de nombreuses mutuelles santé prennent en charge tout ou partie des séances. <strong>Une facture vous est remise</strong> à l'issue de la consultation pour faciliter votre remboursement.</p>
+                        </div>
+                    </div>
+                    <div class="cpage-pricing-info__block">
+                        <div class="cpage-pricing-info__icon">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="currentColor" stroke-width="2"/><path d="M12 8v4M12 16h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                        <div>
+                            <h4>Bon à savoir</h4>
+                            <p>Renseignez-vous auprès de votre complémentaire santé pour connaître votre niveau de prise en charge. Certaines mutuelles remboursent jusqu'à plusieurs séances par an.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="cpage-hero__stats">
-                    <div class="cpage-hero__stat">
-                        <span class="cpage-hero__stat-value">45–60</span>
-                        <span class="cpage-hero__stat-label">min par séance</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MOYENS DE PAIEMENT ===== -->
+    <section class="section cpage-payment-section">
+        <div class="container">
+            <div class="section__header fade-in">
+                <span class="section__tag">Paiement</span>
+                <h2 class="section__title">Moyens de paiement acceptés</h2>
+            </div>
+            <div class="cpage-payment-grid fade-in">
+                <div class="cpage-payment-card cpage-payment-card--ok">
+                    <div class="cpage-payment-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor"/><path d="M6.5 12.5L6.5 9.5a1 1 0 0 1 1-1h3a1 1 0 0 1 0 2H8.5v1h1.5a.5.5 0 0 1 0 1H8.5v1h2a1 1 0 0 1 0 2h-3a1 1 0 0 1-1-1v-.5" fill="currentColor"/><text x="13" y="16" font-size="7" font-weight="bold" fill="currentColor">€</text></svg>
                     </div>
-                    <div class="cpage-hero__stat-sep"></div>
-                    <div class="cpage-hero__stat">
-                        <span class="cpage-hero__stat-value">60 €</span>
-                        <span class="cpage-hero__stat-label">la consultation</span>
+                    <p class="cpage-payment-card__name">Espèces</p>
+                    <span class="cpage-payment-card__badge cpage-payment-card__badge--ok">Accepté</span>
+                </div>
+
+                <div class="cpage-payment-card cpage-payment-card--ok">
+                    <div class="cpage-payment-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM9 11H7V9h2v2zm4 0h-2V9h2v2zm4 0h-2V9h2v2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
                     </div>
-                    <div class="cpage-hero__stat-sep"></div>
-                    <div class="cpage-hero__stat">
-                        <span class="cpage-hero__stat-value">Mutuelle</span>
-                        <span class="cpage-hero__stat-label">remboursement possible</span>
+                    <p class="cpage-payment-card__name">Chèque</p>
+                    <span class="cpage-payment-card__badge cpage-payment-card__badge--ok">Accepté</span>
+                </div>
+
+                <div class="cpage-payment-card cpage-payment-card--ok">
+                    <div class="cpage-payment-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 10h20" stroke="currentColor" stroke-width="1.5"/><path d="M6 15h4M14 15h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                     </div>
+                    <p class="cpage-payment-card__name">Virement bancaire</p>
+                    <span class="cpage-payment-card__badge cpage-payment-card__badge--ok">Accepté</span>
+                </div>
+
+                <div class="cpage-payment-card cpage-payment-card--no">
+                    <div class="cpage-payment-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 10h20M6 14h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <p class="cpage-payment-card__name">Carte bancaire</p>
+                    <span class="cpage-payment-card__badge cpage-payment-card__badge--no">Non accepté</span>
                 </div>
             </div>
         </div>
@@ -228,94 +280,6 @@
                     </div>
                     <h4>Après la séance</h4>
                     <p>Hydratez-vous et évitez les efforts intenses pendant 24h–48h pour laisser le corps intégrer le traitement.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== TARIFS & REMBOURSEMENT ===== -->
-    <section class="cpage-pricing-section section--white">
-        <div class="container">
-            <div class="section__header fade-in">
-                <span class="section__tag">Tarifs</span>
-                <h2 class="section__title">Tarifs & Remboursement</h2>
-            </div>
-
-            <div class="cpage-pricing-layout fade-in">
-                <!-- Tarif principal -->
-                <div class="cpage-pricing-main">
-                    <div class="cpage-pricing-main__label">Consultation d'ostéopathie</div>
-                    <div class="cpage-pricing-main__price">
-                        <span class="cpage-pricing-main__amount">60</span>
-                        <span class="cpage-pricing-main__currency">€</span>
-                    </div>
-                    <p class="cpage-pricing-main__desc">Bilan complet et traitement · Séance de 45 min à 1h</p>
-                    <a href="contacts.html" class="btn btn--primary">Prendre rendez-vous</a>
-                </div>
-
-                <!-- Infos remboursement -->
-                <div class="cpage-pricing-info">
-                    <div class="cpage-pricing-info__block">
-                        <div class="cpage-pricing-info__icon">
-                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2" stroke="currentColor" stroke-width="2"/><line x1="1" y1="10" x2="23" y2="10" stroke="currentColor" stroke-width="2"/></svg>
-                        </div>
-                        <div>
-                            <h4>Prise en charge mutuelle</h4>
-                            <p>L'ostéopathie n'est pas remboursée par la Sécurité Sociale. Cependant, de nombreuses mutuelles santé prennent en charge tout ou partie des séances. <strong>Une facture vous est remise</strong> à l'issue de la consultation pour faciliter votre remboursement.</p>
-                        </div>
-                    </div>
-                    <div class="cpage-pricing-info__block">
-                        <div class="cpage-pricing-info__icon">
-                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="currentColor" stroke-width="2"/><path d="M12 8v4M12 16h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                        </div>
-                        <div>
-                            <h4>Bon à savoir</h4>
-                            <p>Renseignez-vous auprès de votre complémentaire santé pour connaître votre niveau de prise en charge. Certaines mutuelles remboursent jusqu'à plusieurs séances par an.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== MOYENS DE PAIEMENT ===== -->
-    <section class="section cpage-payment-section">
-        <div class="container">
-            <div class="section__header fade-in">
-                <span class="section__tag">Paiement</span>
-                <h2 class="section__title">Moyens de paiement acceptés</h2>
-            </div>
-            <div class="cpage-payment-grid fade-in">
-                <div class="cpage-payment-card cpage-payment-card--ok">
-                    <div class="cpage-payment-card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor"/><path d="M6.5 12.5L6.5 9.5a1 1 0 0 1 1-1h3a1 1 0 0 1 0 2H8.5v1h1.5a.5.5 0 0 1 0 1H8.5v1h2a1 1 0 0 1 0 2h-3a1 1 0 0 1-1-1v-.5" fill="currentColor"/><text x="13" y="16" font-size="7" font-weight="bold" fill="currentColor">€</text></svg>
-                    </div>
-                    <p class="cpage-payment-card__name">Espèces</p>
-                    <span class="cpage-payment-card__badge cpage-payment-card__badge--ok">Accepté</span>
-                </div>
-
-                <div class="cpage-payment-card cpage-payment-card--ok">
-                    <div class="cpage-payment-card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM9 11H7V9h2v2zm4 0h-2V9h2v2zm4 0h-2V9h2v2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-                    </div>
-                    <p class="cpage-payment-card__name">Chèque</p>
-                    <span class="cpage-payment-card__badge cpage-payment-card__badge--ok">Accepté</span>
-                </div>
-
-                <div class="cpage-payment-card cpage-payment-card--ok">
-                    <div class="cpage-payment-card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 10h20" stroke="currentColor" stroke-width="1.5"/><path d="M6 15h4M14 15h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                    </div>
-                    <p class="cpage-payment-card__name">Virement bancaire</p>
-                    <span class="cpage-payment-card__badge cpage-payment-card__badge--ok">Accepté</span>
-                </div>
-
-                <div class="cpage-payment-card cpage-payment-card--no">
-                    <div class="cpage-payment-card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 10h20M6 14h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                    </div>
-                    <p class="cpage-payment-card__name">Carte bancaire</p>
-                    <span class="cpage-payment-card__badge cpage-payment-card__badge--no">Non accepté</span>
                 </div>
             </div>
         </div>
