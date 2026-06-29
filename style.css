@@ -3032,6 +3032,18 @@ ul {
     padding-right: 18px;
   }
 
+
+  .btn--gold,
+  .consultation-cta-btn {
+    background: var(--gradient-gold);
+    color: var(--white) !important;
+    border: none;
+  }
+
+  .consultation-cta-btn:hover {
+    color: var(--white) !important;
+  }
+
   .hero__actions,
   .profile-actions,
   .consultation-cta-banner__actions {
