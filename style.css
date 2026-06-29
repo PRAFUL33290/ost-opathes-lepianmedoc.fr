@@ -3044,6 +3044,19 @@ ul {
   box-shadow: var(--shadow);
 }
 
+.news-section .news-card {
+  color: var(--text);
+}
+
+.news-section .section__tag {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.news-section .section__subtitle {
+  color: var(--text-light);
+}
+
 @media (min-width: 769px) {
   .cabinet-card h3 {
     min-height: 32px;

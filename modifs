@@ -1,17 +1,15 @@
-le logo dans tout le header de toutes les pages LOGO/LIVRAISON LOGO CELINE & BRYAN/1.-LOGO.png 
--------------------------------
-Dans index.html, il faudrait que la hero section monte en absolute, pour faire fondre le header avec le background de la hero section.
-Uniquement; du coup, le menu serait en écriture blanche en gardant la même animation.
--------------------------------
-Il faut remplacer le logo partout dans le header sur toutes les pages, et le footer. Le bon logo est LOGO/LIVRAISON LOGO CELINE & BRYAN/1.-LOGO.png
--------------------------------
-Il faut encore mieux centrer le texte de la hero section au centre surtout verticalement
--------------------------------
-Le "473 Route de Pauillac, 1
+sur index.html, premier bouton en bleu, deuxieme en dorée (rien a changer). Dans l'encadré des cabinets, quand il y a 3 boutons par exemple sur le numéro de téléphone, fond blanc, bordure en bleu et texte en noir. VOici le nouveau style de bouton. 
+
+sur : 473 Route de Pauillac, 1
 er
-étage"
+étage
+33290 Le Pian-Médoc
+Parking et normes PMR
 
-On peut tout mettre sur une seul ligne
--------------------------------
+Il faudrait pas revenir à la ligne. Il faudrait se calquer sur la colonne de gauche c a dire 
 
--------------------------------
+1. adresse 
+2. code postal
+3. Parking et normes PMR
+
+Réalise ces modifications.
