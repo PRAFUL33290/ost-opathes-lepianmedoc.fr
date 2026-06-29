@@ -569,6 +569,12 @@ ul {
   border: none;
 }
 
+.btn--primary:visited,
+.btn--primary:hover,
+.btn--primary:focus-visible {
+  color: var(--white) !important;
+}
+
 .btn--primary:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-blue);
@@ -2917,6 +2923,26 @@ ul {
     var(--gradient-gold) border-box;
   transform: translateY(-2px);
   box-shadow: var(--shadow-gold);
+}
+
+.cabinet-card__booking .btn--gold,
+.cabinet-card__actions .btn--gold,
+.profile-actions .btn--gold,
+.contact-card .btn--gold {
+  background: var(--gradient-gold);
+  color: var(--white) !important;
+  border: none;
+}
+
+.cabinet-card__booking .btn--gold:visited,
+.cabinet-card__booking .btn--gold:hover,
+.cabinet-card__actions .btn--gold:visited,
+.cabinet-card__actions .btn--gold:hover,
+.profile-actions .btn--gold:visited,
+.profile-actions .btn--gold:hover,
+.contact-card .btn--gold:visited,
+.contact-card .btn--gold:hover {
+  color: var(--white) !important;
 }
 
 .rdv-columns {
