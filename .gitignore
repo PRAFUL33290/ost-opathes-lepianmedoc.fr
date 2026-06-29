@@ -7,6 +7,9 @@
 *.save
 *.tmp
 
+# Dépendances Node.js
+node_modules/
+
 # Fichiers source graphiques (non nécessaires pour le site)
 *.mp4
 *.MP4

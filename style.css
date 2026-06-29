@@ -490,6 +490,7 @@ ul {
 
 .hero__actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   align-items: center;
   justify-content: center;
@@ -607,7 +608,8 @@ ul {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 14px 32px;
+  min-height: 52px;
+  padding: 0 28px;
   border-radius: 50px;
   font-size: 0.95rem;
   font-weight: 600;
@@ -618,12 +620,17 @@ ul {
   text-align: center;
   justify-content: center;
   max-width: 100%;
-  white-space: normal;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
+  overflow-wrap: normal;
   border: 1px solid transparent;
   background:
     linear-gradient(var(--white), var(--white)) padding-box,
     var(--gradient-gold) border-box;
+}
+
+.btn span,
+.consultation-cta-btn span {
+  white-space: nowrap;
 }
 
 .btn svg {
@@ -1616,6 +1623,16 @@ ul {
 
 .practitioner-hero__content {
   flex: 1;
+}
+
+.practitioner-hero .hero__actions {
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 430px;
+}
+
+.practitioner-hero .hero__actions .btn {
+  width: 100%;
 }
 
 .practitioner-hero__content h1 {
@@ -3067,6 +3084,7 @@ ul {
 @media (min-width: 480px) {
   .cpage-cta-actions {
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
   }
 }
@@ -3524,6 +3542,7 @@ ul {
 @media (min-width: 640px) {
   .consultation-cta-banner__actions {
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 32px;
   }
 }
@@ -3531,13 +3550,19 @@ ul {
 .consultation-cta-btn {
   background: var(--gradient-gold);
   color: var(--white) !important;
-  padding: 18px 40px;
+  min-height: 52px;
+  padding: 0 28px;
   border: none;
   border-radius: 50px;
-  font-weight: 700;
-  font-size: 1.1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
   transition: all var(--transition);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  overflow-wrap: normal;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), var(--shadow-gold);
 }
 
@@ -3739,8 +3764,14 @@ ul {
 .cabinet-card__booking .btn {
   justify-content: center;
   width: 100%;
-  padding: 12px 18px;
+  min-height: 52px;
+  padding: 0 18px;
   border-radius: 12px;
+}
+
+.cabinet-card__booking-spacer {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .cabinet-card__actions {
@@ -3964,4 +3995,42 @@ ul {
     flex-direction: column;
     align-items: stretch;
   }
+
+  .cabinet-card__booking-spacer {
+    display: none;
+  }
+}
+
+/* ============================================================
+   RÈGLE GLOBALE — Texte toujours blanc sur fond/bouton doré
+   S'applique à toutes les pages. Ne pas supprimer.
+   ============================================================ */
+.btn--gold,
+.btn--gold *,
+.btn--white,
+.btn--white *,
+.btn--white-outline,
+.btn--white-outline *,
+.consultation-cta-btn,
+.consultation-cta-btn *,
+.bg-gold,
+.bg-gold *,
+[class*="--gold"]:not(.btn--ghost):not(.btn--outline),
+[class*="--gold"]:not(.btn--ghost):not(.btn--outline) * {
+  color: #ffffff !important;
+}
+
+.btn--gold svg,
+.btn--white svg,
+.consultation-cta-btn svg {
+  stroke: #ffffff !important;
+  fill: none !important;
+}
+
+/* Tout état (survol, focus, visité) reste blanc */
+.btn--gold:visited, .btn--gold:hover, .btn--gold:focus-visible,
+.btn--white:visited, .btn--white:hover, .btn--white:focus-visible,
+.btn--white-outline:visited, .btn--white-outline:hover, .btn--white-outline:focus-visible,
+.consultation-cta-btn:visited, .consultation-cta-btn:hover, .consultation-cta-btn:focus-visible {
+  color: #ffffff !important;
 }
