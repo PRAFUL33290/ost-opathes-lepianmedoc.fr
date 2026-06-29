@@ -12,6 +12,317 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== CONTACT PAGE REDESIGN ===== */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* ===== INFO SIDE ===== */
+        .contact-info__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 32px;
+            color: var(--text);
+        }
+
+        .contact-info__list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .contact-info__item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .contact-info__icon-wrap {
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            border-radius: 12px;
+            background: var(--primary-light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-info__icon-wrap svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.9;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .contact-info__body strong {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .contact-info__body p,
+        .contact-info__body a {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .contact-info__body a {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .contact-info__body a:hover {
+            text-decoration: underline;
+        }
+
+        /* RDV practitioners */
+        .contact-rdv {
+            background: var(--gradient-hero);
+            border-radius: var(--radius-lg);
+            padding: 28px 32px;
+            color: var(--white);
+        }
+
+        .contact-rdv__label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 18px;
+        }
+
+        .contact-rdv__practitioner {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .contact-rdv__practitioner:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .contact-rdv__practitioner:first-of-type {
+            padding-top: 0;
+        }
+
+        .contact-rdv__name {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .contact-rdv__schedule {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .contact-rdv__collabs {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.55);
+            font-style: italic;
+        }
+
+        .contact-rdv__actions {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .contact-rdv__actions .btn {
+            width: 100%;
+            justify-content: center;
+            padding: 10px 18px;
+            font-size: 0.84rem;
+        }
+
+        /* ===== FORM SIDE ===== */
+        .contact-form-wrap {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(26, 111, 181, 0.08);
+        }
+
+        .contact-form-wrap h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .contact-form-wrap > p {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            font-size: 0.84rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .form-group label .required {
+            color: var(--primary);
+            margin-left: 2px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            font-family: inherit;
+            font-size: 0.9rem;
+            color: var(--text);
+            background: var(--bg);
+            border: 1.5px solid rgba(26, 111, 181, 0.15);
+            border-radius: 10px;
+            padding: 12px 16px;
+            transition: border-color var(--transition), box-shadow var(--transition);
+            outline: none;
+            width: 100%;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 111, 181, 0.1);
+            background: var(--white);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-consent {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            margin-bottom: 24px;
+            padding: 16px;
+            background: var(--primary-light);
+            border-radius: 10px;
+            border: 1px solid rgba(26, 111, 181, 0.15);
+        }
+
+        .form-consent input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            min-width: 18px;
+            margin-top: 2px;
+            accent-color: var(--primary);
+            cursor: pointer;
+        }
+
+        .form-consent label {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            line-height: 1.55;
+            cursor: pointer;
+        }
+
+        .form-consent label a {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .form-submit .btn {
+            width: 100%;
+            justify-content: center;
+            padding: 14px;
+            font-size: 0.95rem;
+        }
+
+        .form-gdpr-note {
+            margin-top: 14px;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .form-gdpr-note svg {
+            width: 13px;
+            height: 13px;
+            display: inline;
+            vertical-align: middle;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            margin-right: 3px;
+        }
+
+        /* Map inline */
+        .contact-map-inline {
+            border-radius: var(--radius);
+            overflow: hidden;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(26, 111, 181, 0.1);
+        }
+
+        .contact-map-inline iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .contact-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .contact-form-wrap {
+                padding: 28px 20px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -26,6 +337,10 @@
                 <a href="index.html" class="nav-item">
                     <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5 10.5V20h14v-9.5"></path><path d="M9 20v-6h6v6"></path></svg>
                     <span>Accueil</span>
+                </a>
+                <a href="consultations.html" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8"></path><path d="M9 3v5l-4 8a4 4 0 0 0 3.6 5h6.8A4 4 0 0 0 19 16l-4-8V3"></path><path d="M8 14h8"></path></svg>
+                    <span>Consultations &amp; tarifs</span>
                 </a>
                 <div class="nav-group">
                     <button class="nav-item" type="button" aria-haspopup="true">
@@ -46,7 +361,6 @@
                     </button>
                     <div class="nav-submenu">
                         <a href="osteopathie.html"><svg class="submenu-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.2-8.8 10.4-8.8 10.4S3.2 13.8 3.2 8.6A4.6 4.6 0 0 1 12 6.7a4.6 4.6 0 0 1 8.8 1.9Z"></path></svg><span class="submenu-copy">L'ostéopathie <span>Comprendre l'approche</span></span></a>
-                        <a href="consultations.html"><svg class="submenu-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8"></path><path d="M9 3v5l-4 8a4 4 0 0 0 3.6 5h6.8A4 4 0 0 0 19 16l-4-8V3"></path><path d="M8 14h8"></path></svg><span class="submenu-copy">Consultations &amp; tarifs <span>Déroulé, séance et paiement</span></span></a>
                         <a href="actualites.html"><svg class="submenu-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg><span class="submenu-copy">Actualités <span>Conseils et informations</span></span></a>
                     </div>
                 </div>
@@ -80,102 +394,181 @@
         <div class="container">
             <span class="section__tag" style="margin-bottom: 18px; display:inline-block;">Contact</span>
             <h1>Nous contacter</h1>
-            <p>Retrouvez toutes les informations pour nous joindre et accéder au cabinet.</p>
+            <p>Retrouvez toutes les informations pratiques et écrivez-nous directement.</p>
         </div>
     </section>
 
-    <!-- ===== COORDONNÉES ===== -->
+    <!-- ===== MAIN CONTACT SECTION ===== -->
     <section class="section section--white">
         <div class="container">
-            <div class="section__header fade-in">
-                <span class="section__tag">Coordonnées</span>
-                <h2 class="section__title">Informations pratiques</h2>
-            </div>
-            <div class="contact-grid fade-in">
-                <div class="contact-card">
-                    <div class="contact-card__icon">📍</div>
-                    <h3>Cabinet Pôle Santé</h3>
-                    <p>102 Rue Victor Hugo<br>33290 Le Pian-Médoc<br><a href="https://www.google.com/maps/place/ANDURAND+C%C3%A9line/@44.9558747,-0.6721398,17z/data=!3m1!4b1!4m6!3m5!1s0xd54d47c82446fb3:0x837d6246914f49bc!8m2!3d44.9558747!4d-0.6695649!16s%2Fg%2F11y20p4hb?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Ouvrir Google Maps</a></p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-card__icon">📍</div>
-                    <h3>Cabinet Maison Médicale</h3>
-                    <p>Maison médicale<br>473 Route de Pauillac, 1<sup>er</sup> étage<br>33290 Le Pian-Médoc<br><a href="https://www.google.com/maps/place/SALMON+Bryan+-+Ost%C3%A9opathe+-+Pian+M%C3%A9doc/@44.9522234,-0.6304419,17z/data=!3m1!4b1!4m6!3m5!1s0xd54d47b7d2017b9:0x109382c5611e41e8!8m2!3d44.9522234!4d-0.627867!16s%2Fg%2F11g86j50rt?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Ouvrir Google Maps</a></p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-card__icon">📅</div>
-                    <h3>Rendez-vous</h3>
-                    <p>Prise de rendez-vous en ligne<br><a href="#rendez-vous">via Doctolib</a></p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-card__icon">🕐</div>
-                    <h3>Horaires</h3>
-                    <p>Du lundi au samedi<br>Sur rendez-vous uniquement</p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-card__icon">💶</div>
-                    <h3>Tarif</h3>
-                    <p>Consultation : <strong>60 €</strong><br>Espèces, chèques, virements<br><em>(pas de carte
-                            bancaire)</em></p>
-                </div>
-            </div>
-        </div>
-    </section>
+            <div class="contact-layout">
 
-    <!-- ===== PRATICIENS ===== -->
-    <section class="section" id="rendez-vous">
-        <div class="container">
-            <div class="section__header fade-in">
-                <span class="section__tag">Nos praticiens</span>
-                <h2 class="section__title">Prendre rendez-vous</h2>
-                <p class="section__subtitle">Choisissez votre praticien et réservez votre créneau en ligne.</p>
-            </div>
-            <div class="def-grid fade-in" style="max-width: 900px; margin: 0 auto 40px;">
-                <div class="contact-card" style="text-align: left; padding: 32px;">
-                    <h3 style="font-size: 1.2rem; margin-bottom: 12px;">🩺 Céline Andurand</h3>
-                    <p>Consultations du <strong>lundi au vendredi</strong></p>
-                    <p style="margin-top: 8px;">Collaboratrices : Kim Sabourin (lun-sam), Laura Loison (mer, sam)</p>
-                    <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/celine-andurand" target="_blank" rel="noopener" class="btn btn--primary"
-                        style="margin-top: 16px;">Prendre rendez-vous — Cabinet 1</a>
-                    <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/celine-andurand?pid=practice-131073" target="_blank" rel="noopener" class="btn btn--gold"
-                        style="margin-top: 12px;">Prendre rendez-vous — Cabinet 2</a>
-                </div>
-                <div class="contact-card" style="text-align: left; padding: 32px;">
-                    <h3 style="font-size: 1.2rem; margin-bottom: 12px;">🩺 Bryan Salmon</h3>
-                    <p>Consultations les <strong>lundi, mercredi et vendredi</strong></p>
-                    <p style="margin-top: 8px;">Collaborateur : Antoine Cazot (mar, jeu, sam)</p>
-                    <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/bryan-salmon" target="_blank" rel="noopener" class="btn btn--primary"
-                        style="margin-top: 16px;">Prendre rendez-vous</a>
-                </div>
-            </div>
-        </div>
-    </section>
+                <!-- LEFT: Infos + RDV -->
+                <div class="contact-info">
+                    <h2 class="contact-info__title">Informations pratiques</h2>
 
-    <!-- ===== CARTE ===== -->
-    <section class="section section--white">
-        <div class="container">
-            <div class="section__header fade-in">
-                <span class="section__tag">Localisation</span>
-                <h2 class="section__title">Comment nous trouver</h2>
-            </div>
-            <div class="map-wrapper fade-in">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22614.88178877449!2d-0.7555!3d44.8947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54d7e4b5b8a8ab%3A0x408ab2ae4bae200!2s33290%20Le%20Pian-M%C3%A9doc!5e0!3m2!1sfr!2sfr!4v1709000000000!5m2!1sfr!2sfr"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                    title="Localisation du cabinet au Pian-Médoc">
-                </iframe>
-            </div>
-        </div>
-    </section>
+                    <div class="contact-info__list">
+                        <div class="contact-info__item">
+                            <div class="contact-info__icon-wrap">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>
+                            </div>
+                            <div class="contact-info__body">
+                                <strong>Cabinet Pôle Santé Victor Hugo</strong>
+                                <p>102 Rue Victor Hugo<br>33290 Le Pian-Médoc<br>
+                                <a href="https://www.google.com/maps/place/ANDURAND+C%C3%A9line/@44.9558747,-0.6721398,17z/data=!3m1!4b1!4m6!3m5!1s0xd54d47c82446fb3:0x837d6246914f49bc!8m2!3d44.9558747!4d-0.6695649!16s%2Fg%2F11y20p4hb?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Ouvrir dans Google Maps →</a></p>
+                            </div>
+                        </div>
 
-    <!-- ===== CTA BANNER ===== -->
-    <section class="cta-banner">
-        <div class="container fade-in">
-            <h2>Prenez soin de vous</h2>
-            <p>Réservez votre consultation en quelques clics via Doctolib.</p>
-            <a href="#rendez-vous" class="btn btn--white">
-                📅 Prendre rendez-vous
-            </a>
+                        <div class="contact-info__item">
+                            <div class="contact-info__icon-wrap">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7Z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>
+                            </div>
+                            <div class="contact-info__body">
+                                <strong>Cabinet Maison Médicale Portes du Médoc</strong>
+                                <p>473 Route de Pauillac, 1<sup>er</sup> étage<br>33290 Le Pian-Médoc<br>
+                                <a href="https://www.google.com/maps/place/SALMON+Bryan+-+Ost%C3%A9opathe+-+Pian+M%C3%A9doc/@44.9522234,-0.6304419,17z/data=!3m1!4b1!4m6!3m5!1s0xd54d47b7d2017b9:0x109382c5611e41e8!8m2!3d44.9522234!4d-0.627867!16s%2Fg%2F11g86j50rt?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Ouvrir dans Google Maps →</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info__item">
+                            <div class="contact-info__icon-wrap">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.7 19.7 0 0 1-8.6-3.1 19.3 19.3 0 0 1-6-6A19.7 19.7 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"></path></svg>
+                            </div>
+                            <div class="contact-info__body">
+                                <strong>Téléphone</strong>
+                                <p><a href="tel:0556930173">05 56 93 01 73</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info__item">
+                            <div class="contact-info__icon-wrap">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z"></path><path d="m4 7 8 6 8-6"></path></svg>
+                            </div>
+                            <div class="contact-info__body">
+                                <strong>Email</strong>
+                                <p><a href="mailto:contact@osteopathe-lepianmedoc.fr">contact@osteopathe-lepianmedoc.fr</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info__item">
+                            <div class="contact-info__icon-wrap">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                            </div>
+                            <div class="contact-info__body">
+                                <strong>Horaires</strong>
+                                <p>Du lundi au samedi<br>Sur rendez-vous uniquement</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info__item">
+                            <div class="contact-info__icon-wrap">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v10l4 4"></path><circle cx="12" cy="12" r="10"></circle><path d="M8 12h4"></path></svg>
+                            </div>
+                            <div class="contact-info__body">
+                                <strong>Tarif de consultation</strong>
+                                <p><strong style="color:var(--text);">60 €</strong> — Espèces, chèques, virements<br><em>(pas de carte bancaire)</em></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carte -->
+                    <div class="contact-map-inline">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22614.88178877449!2d-0.7555!3d44.8947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54d7e4b5b8a8ab%3A0x408ab2ae4bae200!2s33290%20Le%20Pian-M%C3%A9doc!5e0!3m2!1sfr!2sfr!4v1709000000000!5m2!1sfr!2sfr"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Localisation du cabinet au Pian-Médoc">
+                        </iframe>
+                    </div>
+
+                    <!-- RDV encart -->
+                    <div class="contact-rdv" id="rendez-vous">
+                        <p class="contact-rdv__label">Réserver en ligne via Doctolib</p>
+
+                        <div class="contact-rdv__practitioner">
+                            <span class="contact-rdv__name">Céline Andurand</span>
+                            <span class="contact-rdv__schedule">Lun – Ven</span>
+                            <span class="contact-rdv__collabs">Collaboratrices : Kim Sabourin (lun-sam), Laura Loison (mer, sam)</span>
+                            <div class="contact-rdv__actions">
+                                <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/celine-andurand" target="_blank" rel="noopener" class="btn btn--white">Cabinet Pôle Santé</a>
+                                <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/celine-andurand?pid=practice-131073" target="_blank" rel="noopener" class="btn btn--gold">Cabinet Maison Médicale</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-rdv__practitioner">
+                            <span class="contact-rdv__name">Bryan Salmon</span>
+                            <span class="contact-rdv__schedule">Lun, Mer, Ven</span>
+                            <span class="contact-rdv__collabs">Collaborateur : Antoine Cazot (mar, jeu, sam)</span>
+                            <div class="contact-rdv__actions">
+                                <a href="https://www.doctolib.fr/osteopathe/le-pian-medoc/bryan-salmon" target="_blank" rel="noopener" class="btn btn--white">Prendre rendez-vous</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Contact form -->
+                <div class="contact-form-wrap">
+                    <h2>Envoyer un message</h2>
+                    <p>Vous avez une question ? Remplissez ce formulaire, nous vous répondrons dans les meilleurs délais.</p>
+
+                    <form action="#" method="post" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prenom">Prénom <span class="required">*</span></label>
+                                <input type="text" id="prenom" name="prenom" autocomplete="given-name" required placeholder="Marie">
+                            </div>
+                            <div class="form-group">
+                                <label for="nom">Nom <span class="required">*</span></label>
+                                <input type="text" id="nom" name="nom" autocomplete="family-name" required placeholder="Dupont">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Adresse e-mail <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" autocomplete="email" required placeholder="marie.dupont@email.fr">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telephone">Téléphone <span style="font-weight:400; color:var(--text-light);">(optionnel)</span></label>
+                            <input type="tel" id="telephone" name="telephone" autocomplete="tel" placeholder="06 00 00 00 00">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sujet">Sujet <span class="required">*</span></label>
+                            <select id="sujet" name="sujet" required>
+                                <option value="" disabled selected>Choisissez un sujet…</option>
+                                <option value="information">Demande d'information</option>
+                                <option value="rdv">Prise de rendez-vous</option>
+                                <option value="tarifs">Tarifs et remboursements</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" required placeholder="Décrivez votre demande…"></textarea>
+                        </div>
+
+                        <div class="form-consent">
+                            <input type="checkbox" id="rgpd" name="rgpd" required>
+                            <label for="rgpd">
+                                J'accepte que les informations saisies dans ce formulaire soient utilisées dans le cadre du traitement de ma demande de contact. Conformément au <strong>RGPD</strong>, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour l'exercer, contactez-nous à <a href="mailto:contact@osteopathe-lepianmedoc.fr">contact@osteopathe-lepianmedoc.fr</a>. Les données sont conservées 3 ans maximum et ne sont jamais transmises à des tiers.
+                            </label>
+                        </div>
+
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn--primary">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2 11 13"></path><path d="M22 2 15 22l-4-9-9-4 20-7Z"></path></svg>
+                                Envoyer le message
+                            </button>
+                        </div>
+
+                        <p class="form-gdpr-note">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                            Vos données sont protégées et ne seront jamais revendues ni utilisées à des fins commerciales.
+                        </p>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -185,8 +578,7 @@
             <div class="footer__grid">
                 <div class="footer__brand">
                     <img src="1.-LOGO.png" alt="Logo Cabinet Ostéopathie">
-                    <p>Cabinet d'ostéopathie au Pian-Médoc. Prise en charge globale et personnalisée pour votre
-                        bien-être.</p>
+                    <p>Cabinet d'ostéopathie au Pian-Médoc. Prise en charge globale et personnalisée pour votre bien-être.</p>
                 </div>
                 <div class="footer__col">
                     <h4>Navigation</h4>
