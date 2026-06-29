@@ -77,16 +77,16 @@ ul {
   width: 100%;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.9);
-  -webkit-backdrop-filter: blur(18px);
-  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(26, 111, 181, 0.08);
   transition: background var(--transition), border-color var(--transition), box-shadow var(--transition), backdrop-filter var(--transition);
 }
 
 .navbar.scrolled {
   background: rgba(255, 255, 255, 0.9);
-  -webkit-backdrop-filter: blur(18px);
-  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   box-shadow: 0 2px 30px rgba(26, 111, 181, 0.1);
 }
 
@@ -102,17 +102,21 @@ ul {
   position: fixed;
   background: rgba(255, 255, 255, 0.9);
   border-bottom-color: rgba(26, 111, 181, 0.08);
-  -webkit-backdrop-filter: blur(18px);
-  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   box-shadow: 0 2px 30px rgba(26, 111, 181, 0.1);
 }
 
 .navbar .container {
+  width: 100%;
+  max-width: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-left: 48px;
+  padding-right: 48px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   gap: 28px;
 }
 
@@ -120,18 +124,20 @@ ul {
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
-  padding: 4px 0;
+  padding: 2px 0;
 }
 
 .navbar__logo img {
   height: auto;
-  width: 108px;
+  width: 96px;
 }
 
 .navbar__links {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 12px;
+  margin-left: auto;
 }
 
 .nav-mobile-contact {
@@ -147,7 +153,7 @@ ul {
   font-weight: 600;
   color: var(--text);
   position: relative;
-  padding: 10px 12px;
+  padding: 8px 12px;
   letter-spacing: 0;
   background: transparent;
   border: 0;
@@ -1972,11 +1978,13 @@ ul {
 @media (max-width: 768px) {
   .navbar .container {
     min-height: 0;
+    padding-left: 24px;
+    padding-right: 24px;
     gap: 16px;
   }
 
   .navbar__logo img {
-    width: 98px;
+    width: 88px;
   }
 
   .navbar__links {
