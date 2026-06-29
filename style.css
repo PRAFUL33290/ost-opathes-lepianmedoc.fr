@@ -411,10 +411,12 @@ ul {
 }
 
 .hero h1 span {
-  background: linear-gradient(135deg, #ffffff, #a8ddf5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white);
+  -webkit-text-fill-color: var(--white);
+  border-radius: 12px;
+  padding: 0 12px 4px;
 }
 
 .hero__subtitle {
@@ -561,6 +563,17 @@ ul {
   background:
     linear-gradient(var(--white), var(--white)) padding-box,
     var(--gradient-gold) border-box;
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .btn--primary {
@@ -1383,9 +1396,12 @@ ul {
 }
 
 .footer__brand p {
+  color: var(--white);
   font-size: 0.88rem;
   line-height: 1.7;
   max-width: 280px;
+  opacity: 1;
+  pointer-events: none;
 }
 
 .footer__col h4 {
@@ -3045,16 +3061,12 @@ ul {
 }
 
 .news-section .news-card {
-  color: var(--text);
+  color: #000;
 }
 
-.news-section .section__tag {
-  background: var(--primary-light);
-  color: var(--primary);
-}
-
+.news-section .section__title,
 .news-section .section__subtitle {
-  color: var(--text-light);
+  color: #000;
 }
 
 @media (min-width: 769px) {
