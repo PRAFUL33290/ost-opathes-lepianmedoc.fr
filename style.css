@@ -3796,15 +3796,15 @@ ul {
 
 .btn--ghost {
   background:
-    linear-gradient(rgba(26, 111, 181, 0.08), rgba(26, 111, 181, 0.08)) padding-box,
+    linear-gradient(rgba(26, 111, 181, 0.65), rgba(26, 111, 181, 0.65)) padding-box,
     var(--gradient-gold) border-box;
-  color: var(--primary);
+  color: var(--white);
   border: 1px solid transparent;
 }
 
 .btn--ghost:hover {
   background:
-    linear-gradient(rgba(26, 111, 181, 0.14), rgba(26, 111, 181, 0.14)) padding-box,
+    linear-gradient(rgba(26, 111, 181, 0.8), rgba(26, 111, 181, 0.8)) padding-box,
     var(--gradient-gold) border-box;
   transform: translateY(-2px);
   box-shadow: var(--shadow-gold);
