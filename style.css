@@ -1975,6 +1975,32 @@ ul {
   transform: none;
 }
 
+/* ===== FADE UP (toutes les pages) ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.fade-up.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Légère cascade pour les éléments groupés */
+.fade-up[data-delay="1"] { transition-delay: 0.1s; }
+.fade-up[data-delay="2"] { transition-delay: 0.2s; }
+.fade-up[data-delay="3"] { transition-delay: 0.3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 992px) {
   .hero h1 {
