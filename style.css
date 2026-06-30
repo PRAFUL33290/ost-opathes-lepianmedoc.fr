@@ -2747,6 +2747,29 @@ ul {
   line-height: 1.65;
 }
 
+.cpage-practical-block {
+  margin-top: 56px;
+  padding-top: 56px;
+  border-top: 1px solid rgba(26, 111, 181, 0.1);
+}
+
+.cpage-practical-block__header {
+  text-align: center;
+}
+
+.cpage-practical-block__header .section__tag {
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.cpage-practical-block__header h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.15;
+}
+
 /* Info cards */
 .cpage-info-section {
   padding: 100px 0;
