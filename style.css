@@ -4388,6 +4388,24 @@ ul {
   color: var(--text-light);
 }
 
+.blog-card--photo .blog-card__content,
+.blog-card--photo .blog-card__content h3,
+.blog-card--photo .blog-card__content p,
+.blog-card--photo .blog-card__content time,
+.blog-card--photo .blog-card__content .blog-card__meta {
+  color: var(--white) !important;
+}
+
+.blog-card--photo .blog-card__content p {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.blog-card--photo .blog-card__content .blog-card__meta span {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: var(--white) !important;
+}
+
 .blog-card__button {
   margin-top: auto;
 }
