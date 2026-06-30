@@ -4091,6 +4091,16 @@ ul {
   color: var(--text-light);
 }
 
+.blog-card--photo h3,
+.blog-card--photo p,
+.blog-card--photo .blog-card__meta {
+  color: var(--white);
+}
+
+.blog-card--photo p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
 .blog-card__button {
   margin-top: auto;
 }
