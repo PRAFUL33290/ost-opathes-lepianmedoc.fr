@@ -4038,3 +4038,129 @@ ul {
 .consultation-cta-btn:visited, .consultation-cta-btn:hover, .consultation-cta-btn:focus-visible {
   color: #ffffff !important;
 }
+
+/* ===== BLOG ===== */
+.blog-listing .section__heading {
+  max-width: 760px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.blog-card {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 34px;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f7fbff 100%) padding-box,
+    var(--gradient-gold) border-box;
+  border: 1px solid transparent;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.blog-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-dark);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.blog-card__meta span {
+  display: inline-flex;
+  padding: 5px 10px;
+  background: var(--primary-light);
+  border-radius: 999px;
+}
+
+.blog-card h3 {
+  color: var(--primary-deeper);
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  line-height: 1.25;
+}
+
+.blog-card p {
+  color: var(--text-light);
+}
+
+.blog-card__button {
+  margin-top: auto;
+}
+
+.blog-article-wrap .container {
+  max-width: 940px;
+}
+
+.blog-article {
+  padding: clamp(30px, 5vw, 58px);
+  background: var(--white);
+  border: 1px solid rgba(26, 111, 181, 0.08);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.blog-article__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 30px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(26, 111, 181, 0.1);
+}
+
+.blog-article__back {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.blog-article h2 {
+  margin: 34px 0 14px;
+  color: var(--primary-deeper);
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+  line-height: 1.25;
+}
+
+.blog-article p,
+.blog-article li {
+  color: var(--text-light);
+  font-size: 1.04rem;
+}
+
+.blog-article p + p {
+  margin-top: 14px;
+}
+
+.blog-article ul {
+  display: grid;
+  gap: 12px;
+  margin: 12px 0 18px;
+  padding-left: 22px;
+  list-style: disc;
+}
+
+.blog-article__cta {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(26, 111, 181, 0.1);
+}
+
+@media (max-width: 768px) {
+  .blog-card,
+  .blog-article {
+    padding: 26px;
+  }
+}
