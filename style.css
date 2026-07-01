@@ -1886,6 +1886,8 @@ ul {
 
 /* ===== INFO BANNER ===== */
 .info-banner {
+  position: relative;
+  overflow: hidden;
   background: var(--gradient);
   padding: 40px;
   border-radius: var(--radius-lg);
@@ -1896,6 +1898,28 @@ ul {
   max-width: 900px;
   margin: 0 auto;
   color: var(--white);
+}
+
+.info-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.32;
+}
+
+.info-banner > * {
+  position: relative;
+  z-index: 1;
+}
+
+.info-banner--celine::before {
+  background-image: url('DOCUMENTS/POLE SANTE.jpg');
+}
+
+.info-banner--bryan::before {
+  background-image: url('DOCUMENTS/MAISON MEDICALE.png');
 }
 
 .info-banner h3 {
