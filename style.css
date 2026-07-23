@@ -767,17 +767,27 @@ ul {
 
 .btn--white-outline {
   background:
-    linear-gradient(rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04)) padding-box,
+    linear-gradient(var(--white), var(--white)) padding-box,
     var(--gradient-gold) border-box;
   border: 1px solid transparent;
-  color: var(--white);
+  color: var(--text) !important;
+}
+
+.btn--white-outline,
+.btn--white-outline * {
+  color: var(--text) !important;
+}
+
+.btn--white-outline svg {
+  stroke: var(--text);
 }
 
 .btn--white-outline:hover {
   background:
-    linear-gradient(rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16)) padding-box,
+    linear-gradient(var(--white), var(--white)) padding-box,
     var(--gradient-gold) border-box;
   transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
 }
 
 /* ===== SECTIONS ===== */
