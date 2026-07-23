@@ -1593,18 +1593,156 @@ ul {
   display: block;
 }
 
-.full-image-section--tall img {
-  height: auto;
-  object-fit: initial;
-}
-
 @media (max-width: 640px) {
   .full-image-section img {
     height: 260px;
   }
+}
 
-  .full-image-section--tall img {
-    height: auto;
+/* ===== OSTÉOPATHIE DÉFINITION ===== */
+.osteo-definition {
+  position: relative;
+  background-image: url('PHOTO%20GENERE/BG.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--white);
+}
+
+.osteo-definition::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(10, 34, 64, 0.88) 0%,
+    rgba(10, 34, 64, 0.75) 50%,
+    rgba(10, 34, 64, 0.30) 100%
+  );
+  pointer-events: none;
+}
+
+.osteo-definition__content {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 40px 56px;
+}
+
+.osteo-definition__text {
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.osteo-definition__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.osteo-definition__text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.92);
+}
+
+.osteo-definition__callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 8px;
+  padding: 18px 20px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: var(--radius);
+  backdrop-filter: blur(6px);
+}
+
+.osteo-definition__callout svg {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  stroke: var(--gold-light);
+  margin-top: 2px;
+}
+
+.osteo-definition__callout p {
+  font-size: 0.97rem !important;
+  color: rgba(255,255,255,0.95) !important;
+}
+
+.osteo-definition__badges {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  background: rgba(10, 34, 64, 0.70);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.osteo-definition__badge {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 24px 20px;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.12);
+}
+
+.osteo-definition__badge:last-child {
+  border-right: none;
+}
+
+.osteo-definition__badge svg {
+  width: 36px;
+  height: 36px;
+  stroke: var(--gold-light);
+  flex-shrink: 0;
+}
+
+.osteo-definition__badge span {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.90);
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .osteo-definition__content {
+    padding: 48px 20px 40px;
+  }
+
+  .osteo-definition__text {
+    max-width: 100%;
+  }
+
+  .osteo-definition__title {
+    font-size: 1.75rem;
+  }
+
+  .osteo-definition__badges {
+    flex-wrap: wrap;
+  }
+
+  .osteo-definition__badge {
+    flex: 1 1 calc(50% - 1px);
+    border-right: 1px solid rgba(255,255,255,0.12);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .osteo-definition__badge:nth-child(2n) {
+    border-right: none;
+  }
+
+  .osteo-definition__badge:nth-last-child(-n+2) {
+    border-bottom: none;
   }
 }
 
