@@ -2068,7 +2068,6 @@ ul {
 }
 
 .contact-card a.btn {
-  color: var(--white) !important;
   text-decoration: none;
 }
 
@@ -3969,25 +3968,6 @@ ul {
   filter: brightness(1.04);
 }
 
-.cabinet-card__booking .btn--gold,
-.cabinet-card__actions .btn--gold,
-.profile-actions .btn--gold,
-.contact-card .btn--gold {
-  background: var(--gradient-gold);
-  color: var(--white) !important;
-  border: none;
-}
-
-.cabinet-card__booking .btn--gold:visited,
-.cabinet-card__booking .btn--gold:hover,
-.cabinet-card__actions .btn--gold:visited,
-.cabinet-card__actions .btn--gold:hover,
-.profile-actions .btn--gold:visited,
-.profile-actions .btn--gold:hover,
-.contact-card .btn--gold:visited,
-.contact-card .btn--gold:hover {
-  color: var(--white) !important;
-}
 
 .rdv-columns {
   display: grid;
@@ -4433,7 +4413,6 @@ ul {
   }
 
 
-  .btn--gold,
   .consultation-cta-btn {
     background: var(--gradient-gold);
     color: var(--white) !important;
