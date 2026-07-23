@@ -128,6 +128,29 @@ ul {
   width: 96px;
 }
 
+.navbar__slogan {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-light);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding-left: 14px;
+  border-left: 1px solid rgba(26, 111, 181, 0.18);
+  line-height: 1.25;
+  flex-shrink: 0;
+}
+
+.home-page .navbar__slogan {
+  color: rgba(255, 255, 255, 0.75);
+  border-left-color: rgba(255, 255, 255, 0.22);
+}
+
+.home-page .navbar.scrolled .navbar__slogan {
+  color: var(--text-light);
+  border-left-color: rgba(26, 111, 181, 0.18);
+}
+
 .navbar__links {
   display: flex;
   align-items: center;
@@ -2250,10 +2273,20 @@ ul {
     padding-left: 24px;
     padding-right: 24px;
     gap: 16px;
+    position: relative;
   }
 
   .navbar__logo img {
     width: 88px;
+  }
+
+  .navbar__slogan {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: none;
+    padding-left: 0;
+    font-size: 0.65rem;
   }
 
   .navbar__links {
