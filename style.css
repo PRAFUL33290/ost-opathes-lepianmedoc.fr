@@ -695,23 +695,23 @@ ul {
   background:
     linear-gradient(var(--white), var(--white)) padding-box,
     var(--gradient-gold) border-box;
-  color: var(--text) !important;
+  color: var(--primary) !important;
   border: 1px solid transparent;
 }
 
 .btn--gold,
 .btn--gold * {
-  color: var(--text) !important;
+  color: var(--primary) !important;
 }
 
 .btn--gold svg {
-  stroke: var(--text);
+  stroke: var(--primary);
 }
 
 .btn--gold:visited,
 .btn--gold:hover,
 .btn--gold:focus-visible {
-  color: var(--text) !important;
+  color: var(--primary) !important;
 }
 
 .btn--gold:hover {
@@ -740,23 +740,23 @@ ul {
   background:
     linear-gradient(var(--white), var(--white)) padding-box,
     var(--gradient-gold) border-box;
-  color: var(--text) !important;
+  color: var(--primary) !important;
   border: 1px solid transparent;
 }
 
 .btn--white,
 .btn--white * {
-  color: var(--text) !important;
+  color: var(--primary) !important;
 }
 
 .btn--white svg {
-  stroke: var(--text);
+  stroke: var(--primary);
 }
 
 .btn--white:visited,
 .btn--white:hover,
 .btn--white:focus-visible {
-  color: var(--text) !important;
+  color: var(--primary) !important;
 }
 
 .btn--white:hover {
@@ -770,16 +770,16 @@ ul {
     linear-gradient(var(--white), var(--white)) padding-box,
     var(--gradient-gold) border-box;
   border: 1px solid transparent;
-  color: var(--text) !important;
+  color: var(--primary) !important;
 }
 
 .btn--white-outline,
 .btn--white-outline * {
-  color: var(--text) !important;
+  color: var(--primary) !important;
 }
 
 .btn--white-outline svg {
-  stroke: var(--text);
+  stroke: var(--primary);
 }
 
 .btn--white-outline:hover {
@@ -3723,7 +3723,7 @@ ul {
   background:
     linear-gradient(var(--white), var(--white)) padding-box,
     var(--gradient-gold) border-box;
-  color: var(--text) !important;
+  color: var(--primary) !important;
   min-height: 52px;
   padding: 0 28px;
   border: 1px solid transparent;
@@ -3741,17 +3741,17 @@ ul {
 
 .consultation-cta-btn,
 .consultation-cta-btn * {
-  color: var(--text) !important;
+  color: var(--primary) !important;
 }
 
 .consultation-cta-btn svg {
-  stroke: var(--text);
+  stroke: var(--primary);
 }
 
 .consultation-cta-btn:visited,
 .consultation-cta-btn:hover,
 .consultation-cta-btn:focus-visible {
-  color: var(--text) !important;
+  color: var(--primary) !important;
 }
 
 .consultation-cta-btn:hover {
@@ -3979,17 +3979,17 @@ ul {
   background:
     linear-gradient(var(--white), var(--white)) padding-box,
     var(--gradient-gold) border-box;
-  color: var(--text) !important;
+  color: var(--primary) !important;
   border: 1px solid transparent;
 }
 
 .btn--ghost,
 .btn--ghost * {
-  color: var(--text) !important;
+  color: var(--primary) !important;
 }
 
 .btn--ghost svg {
-  stroke: var(--text);
+  stroke: var(--primary);
 }
 
 .btn--ghost:hover {
