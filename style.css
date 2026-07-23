@@ -1666,7 +1666,7 @@ ul {
   width: 40px;
   height: 40px;
   flex-shrink: 0;
-  stroke: var(--gold-light);
+  stroke: var(--white);
   margin-top: 2px;
 }
 
@@ -1703,7 +1703,7 @@ ul {
 .osteo-definition__badge svg {
   width: 36px;
   height: 36px;
-  stroke: var(--gold-light);
+  stroke: var(--white);
   flex-shrink: 0;
 }
 
