@@ -163,6 +163,10 @@ ul {
   display: none;
 }
 
+.navbar__mobile-logo {
+  display: none;
+}
+
 .nav-item {
   display: inline-flex;
   align-items: center;
@@ -2435,6 +2439,20 @@ ul {
   .navbar__cta .nav-icon,
   .navbar__cta > span {
     justify-self: auto;
+  }
+
+  .navbar__mobile-logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(26, 111, 181, 0.12);
+    margin-bottom: 8px;
+  }
+
+  .navbar__mobile-logo img {
+    width: 90px;
+    height: auto;
   }
 
   .nav-mobile-contact {
