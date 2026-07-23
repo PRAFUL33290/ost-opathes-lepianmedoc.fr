@@ -3710,11 +3710,13 @@ ul {
 }
 
 .consultation-cta-btn {
-  background: var(--gradient-gold);
-  color: var(--white) !important;
+  background:
+    linear-gradient(var(--white), var(--white)) padding-box,
+    var(--gradient-gold) border-box;
+  color: var(--text) !important;
   min-height: 52px;
   padding: 0 28px;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 50px;
   font-weight: 600;
   font-size: 0.95rem;
@@ -3725,19 +3727,26 @@ ul {
   gap: 8px;
   white-space: nowrap;
   overflow-wrap: normal;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), var(--shadow-gold);
+}
+
+.consultation-cta-btn,
+.consultation-cta-btn * {
+  color: var(--text) !important;
+}
+
+.consultation-cta-btn svg {
+  stroke: var(--text);
 }
 
 .consultation-cta-btn:visited,
 .consultation-cta-btn:hover,
 .consultation-cta-btn:focus-visible {
-  color: var(--white) !important;
+  color: var(--text) !important;
 }
 
 .consultation-cta-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), var(--shadow-gold);
-  filter: brightness(1.04);
+  box-shadow: var(--shadow-gold);
 }
 
 .consultation-cta-info {
@@ -3957,15 +3966,25 @@ ul {
 }
 
 .btn--ghost {
-  background: var(--gradient-gold);
-  color: var(--white);
-  border: none;
+  background:
+    linear-gradient(var(--white), var(--white)) padding-box,
+    var(--gradient-gold) border-box;
+  color: var(--text) !important;
+  border: 1px solid transparent;
+}
+
+.btn--ghost,
+.btn--ghost * {
+  color: var(--text) !important;
+}
+
+.btn--ghost svg {
+  stroke: var(--text);
 }
 
 .btn--ghost:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-gold);
-  filter: brightness(1.04);
 }
 
 
@@ -4413,15 +4432,6 @@ ul {
   }
 
 
-  .consultation-cta-btn {
-    background: var(--gradient-gold);
-    color: var(--white) !important;
-    border: none;
-  }
-
-  .consultation-cta-btn:hover {
-    color: var(--white) !important;
-  }
 
   .hero__actions,
   .profile-actions,
@@ -4445,39 +4455,6 @@ ul {
   }
 }
 
-/* ============================================================
-   RÈGLE GLOBALE — Texte toujours blanc sur fond/bouton doré
-   S'applique à toutes les pages. Ne pas supprimer.
-   ============================================================ */
-.btn--gold,
-.btn--gold *,
-.btn--white,
-.btn--white *,
-.btn--white-outline,
-.btn--white-outline *,
-.consultation-cta-btn,
-.consultation-cta-btn *,
-.bg-gold,
-.bg-gold *,
-[class*="--gold"]:not(.btn--ghost):not(.btn--outline),
-[class*="--gold"]:not(.btn--ghost):not(.btn--outline) * {
-  color: #ffffff !important;
-}
-
-.btn--gold svg,
-.btn--white svg,
-.consultation-cta-btn svg {
-  stroke: #ffffff !important;
-  fill: none !important;
-}
-
-/* Tout état (survol, focus, visité) reste blanc */
-.btn--gold:visited, .btn--gold:hover, .btn--gold:focus-visible,
-.btn--white:visited, .btn--white:hover, .btn--white:focus-visible,
-.btn--white-outline:visited, .btn--white-outline:hover, .btn--white-outline:focus-visible,
-.consultation-cta-btn:visited, .consultation-cta-btn:hover, .consultation-cta-btn:focus-visible {
-  color: #ffffff !important;
-}
 
 /* ===== BLOG ===== */
 .blog-listing .section__heading {
