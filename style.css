@@ -1593,9 +1593,18 @@ ul {
   display: block;
 }
 
+.full-image-section--tall img {
+  height: auto;
+  object-fit: initial;
+}
+
 @media (max-width: 640px) {
   .full-image-section img {
     height: 260px;
+  }
+
+  .full-image-section--tall img {
+    height: auto;
   }
 }
 
