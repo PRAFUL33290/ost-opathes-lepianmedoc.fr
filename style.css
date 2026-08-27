@@ -2684,6 +2684,10 @@ ul {
     padding: 70px 0;
   }
 
+  .welcome-section {
+    padding: 48px 0;
+  }
+
   .section__title {
     font-size: 1.7rem;
   }
@@ -5122,6 +5126,10 @@ ul {
     gap: 14px;
   }
 
+  .welcome-grid__item {
+    border-radius: 16px;
+  }
+
   .welcome-grid__item--large {
     grid-column: span 2;
     grid-row: span 1;
@@ -5135,12 +5143,21 @@ ul {
     gap: 12px;
   }
 
+  .welcome-grid__item {
+    border-radius: 14px;
+  }
+
   .welcome-grid__item--large {
-    height: 220px;
+    grid-row: span 1;
+    height: auto;
   }
 
   .welcome-grid__item figcaption {
     font-size: 0.88rem;
     padding: 40px 16px 14px;
+  }
+
+  .welcome-intro {
+    margin-bottom: 32px;
   }
 }
