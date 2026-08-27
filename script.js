@@ -189,3 +189,91 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// ===== CARROUSEL PHOTOS =====
+document.querySelectorAll('[data-carousel]').forEach(carousel => {
+  const track = carousel.querySelector('[data-carousel-track]');
+  const slides = track ? Array.from(track.children) : [];
+  const prevBtn = carousel.querySelector('[data-carousel-prev]');
+  const nextBtn = carousel.querySelector('[data-carousel-next]');
+  const dotsWrap = carousel.querySelector('[data-carousel-dots]');
+
+  if (!track || slides.length <= 1) {
+    return;
+  }
+
+  let index = 0;
+  let autoplayId = null;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const dots = slides.map((_, i) => {
+    if (!dotsWrap) return null;
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'photo-carousel__dot';
+    dot.setAttribute('aria-label', `Aller à la photo ${i + 1}`);
+    dot.addEventListener('click', () => {
+      goTo(i);
+      restartAutoplay();
+    });
+    dotsWrap.appendChild(dot);
+    return dot;
+  });
+
+  function goTo(next) {
+    index = (next + slides.length) % slides.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((dot, i) => {
+      if (dot) dot.classList.toggle('is-active', i === index);
+    });
+    slides.forEach((slide, i) => {
+      slide.setAttribute('aria-hidden', i === index ? 'false' : 'true');
+    });
+  }
+
+  function restartAutoplay() {
+    if (prefersReducedMotion) return;
+    window.clearInterval(autoplayId);
+    autoplayId = window.setInterval(() => goTo(index + 1), 6000);
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      goTo(index - 1);
+      restartAutoplay();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      goTo(index + 1);
+      restartAutoplay();
+    });
+  }
+
+  carousel.addEventListener('mouseenter', () => window.clearInterval(autoplayId));
+  carousel.addEventListener('mouseleave', restartAutoplay);
+
+  // Support du swipe tactile
+  let startX = 0;
+  let isSwiping = false;
+
+  track.addEventListener('touchstart', event => {
+    startX = event.touches[0].clientX;
+    isSwiping = true;
+    window.clearInterval(autoplayId);
+  }, { passive: true });
+
+  track.addEventListener('touchend', event => {
+    if (!isSwiping) return;
+    const delta = event.changedTouches[0].clientX - startX;
+    if (Math.abs(delta) > 45) {
+      goTo(delta < 0 ? index + 1 : index - 1);
+    }
+    isSwiping = false;
+    restartAutoplay();
+  }, { passive: true });
+
+  goTo(0);
+  restartAutoplay();
+});
