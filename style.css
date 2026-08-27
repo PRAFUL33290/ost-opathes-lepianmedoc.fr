@@ -2697,7 +2697,10 @@ ul {
   }
 
   .page-banner h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .page-banner p {
@@ -2748,12 +2751,16 @@ ul {
 
 @media (max-width: 480px) {
   .hero h1 {
-    font-size: 2.3rem;
+    font-size: 2.55rem;
     line-height: 1.2;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero__subtitle {
     font-size: 1.05rem;
+    max-width: 100%;
   }
 
   .hero__actions {
