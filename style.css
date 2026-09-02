@@ -1905,7 +1905,8 @@ ul {
   width: 100%;
 }
 
-.practitioner-hero__content h1 {
+.practitioner-hero__content h1,
+.practitioner-hero__content h2 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 8px;
