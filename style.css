@@ -4057,17 +4057,11 @@ ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
   gap: 14px;
-  margin: 0 28px 18px;
-  font-weight: 700;
-  justify-content: center;
-}
-
-.cabinet-card--bryan .practitioner-list {
-  grid-template-columns: repeat(2, minmax(128px, 1fr));
   width: calc(100% - 56px);
   max-width: 310px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 18px;
+  font-weight: 700;
+  justify-content: center;
 }
 
 .practitioner-chip {
