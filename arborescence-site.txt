@@ -24,7 +24,7 @@ Menu principal du site :
 3. Cabinet Celine
    Fichier : celine.html
    Role : page du cabinet de Celine Andurand.
-   Elle presente Celine Andurand, Kim Sabourin, Laura Loison, le Pole Sante Victor Hugo et les informations de rendez-vous.
+   Elle presente Celine Andurand et Kim Sabourin, le Pole Sante Victor Hugo et les informations de rendez-vous.
 
 4. Cabinet Bryan
    Fichier : bryan.html
@@ -53,7 +53,6 @@ Accueil
 |-- Cabinet Celine
 |   |-- Presentation de Celine Andurand
 |   |-- Presentation de Kim Sabourin
-|   |-- Presentation de Laura Loison
 |   |-- Informations du Pole Sante Victor Hugo
 |   |-- Liens Doctolib et telephone
 |-- Cabinet Bryan
@@ -217,7 +216,6 @@ Accueil
 ├── Cabinet Céline
 │   ├── Céline Andurand
 │   ├── Kim Sabourin
-│   ├── Laura Loison
 │   └── Prendre rendez-vous
 ├── Cabinet Bryan
 │   ├── Bryan Salmon
@@ -236,8 +234,7 @@ Accueil
 ├── Cabinets
 │   ├── Cabinet Céline (Lieu)
 │   │   ├── Céline Andurand
-│   │   ├── Kim Sabourin
-│   │   └── Laura Loison
+│   │   └── Kim Sabourin
 │   └── Cabinet Bryan (Lieu)
 │       ├── Bryan Salmon
 │       └── Antoine Cazot

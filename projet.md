@@ -44,7 +44,6 @@ Son approche repose sur l’écoute, la douceur et une vision globale du corps. 
 ### Collaboratrices de Céline
 
 * Kim Sabourin : présente du lundi au samedi
-* Laura Loison : présente le mercredi et le samedi
 
 ---
 
