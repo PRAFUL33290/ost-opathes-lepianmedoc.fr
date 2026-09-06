@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <script>
-        // Redirection permanente de /index.html vers / (évite le contenu dupliqué, GitHub Pages ne supportant pas les redirections serveur 301)
+        // Permanent redirect from /index.html to / (avoids duplicate content; GitHub Pages has no server-side redirects)
         if (/\/index\.html$/.test(window.location.pathname)) {
             window.location.replace(
-                window.location.pathname.replace(/index\.html$/, '') + window.location.search + window.location.hash
+                (window.location.pathname.replace(/index\.html$/, '') || '/') + window.location.search + window.location.hash
             );
         }
     </script>
