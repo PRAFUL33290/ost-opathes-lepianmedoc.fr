@@ -8,6 +8,12 @@
         content="Ostéopathes au Pian-Médoc (33290) : consultations pour adultes, nourrissons, femmes enceintes et sportifs. Rendez-vous en ligne dans nos cabinets.">
     <title>Ostéopathes Le Pian-Médoc (33290) | Cabinet d'ostéopathie</title>
     <link rel="canonical" href="https://osteopathes-lepianmedoc.fr/">
+    <script>
+        // Redirection permanente de /index.html vers / (évite le contenu dupliqué, GitHub Pages ne supportant pas les redirections serveur 301)
+        if (window.location.pathname.replace(/\/+$/, '').endsWith('/index.html')) {
+            window.location.replace('/' + window.location.search + window.location.hash);
+        }
+    </script>
     <link rel="icon" href="1.-LOGO.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
