@@ -4359,6 +4359,7 @@ ul {
 
 .blog-banner h1 {
   max-width: 980px;
+  margin-inline: auto;
 }
 
 .blog-listing .section__heading {
